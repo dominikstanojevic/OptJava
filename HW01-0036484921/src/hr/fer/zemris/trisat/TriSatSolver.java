@@ -49,14 +49,7 @@ public class TriSatSolver {
 			System.err.println("Given algorithm does not exist.");
 			System.exit(-1);
 		} else {
-			Algorithm3 al = (Algorithm3) a.apply(formula);
-			double total = 0;
-			for (int i = 0; i < 100; i++) {
-				al.run();
-				total += al.it;
-			}
-
-			System.out.println(total / 100);
+			a.apply(formula).run();
 		}
 	}
 

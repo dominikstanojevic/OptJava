@@ -6,9 +6,7 @@ import hr.fer.zemris.trisat.models.BitVectorNGenerator;
 import hr.fer.zemris.trisat.models.SATFormula;
 import hr.fer.zemris.trisat.models.SATFormulaStats;
 
-import java.sql.Wrapper;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -34,17 +32,13 @@ public class Algorithm3 implements Runnable {
 		BitVector vector = new BitVector(TriSatSolver.RANDOM, n);
 		Data data = new Data(vector, fitnessFunction(vector), stats.isSatisfied());
 
-		for(int i = 0; i < ITERATIONS; i++) {
-			try {
-				if(data.isSatisfied) {
-					System.out.println("Solution found: " + vector);
-					System.out.println("Iteration: " + i);
+		for (int i = 0; i < ITERATIONS; i++) {
+			if (data.isSatisfied) {
+				System.out.println("Solution found: " + vector);
+				System.out.println("Iteration: " + i);
 
-					it = i;
-					return;
-				}
-			} catch (Exception e) {
-				System.out.println("iznimka");
+				it = i;
+				return;
 			}
 
 			List<Data> best = getBest(vector);
@@ -67,7 +61,7 @@ public class Algorithm3 implements Runnable {
 		BitVectorNGenerator generator = new BitVectorNGenerator(vector);
 		List<Data> best = new ArrayList<>(NUMBER_OF_BEST);
 
-		for(BitVector v : generator) {
+		for (BitVector v : generator) {
 			stats.setAssignment(v, false);
 
 			double fitness = stats.getPercentageBonus();
@@ -80,21 +74,21 @@ public class Algorithm3 implements Runnable {
 	}
 
 	private void checkBest(List<Data> best, BitVector v, double fitness, boolean isSatisfied) {
-		if(best.size() < NUMBER_OF_BEST) {
+		if (best.size() < NUMBER_OF_BEST) {
 			best.add(new Data(v, fitness, isSatisfied));
 			return;
 		}
 
 		double min = best.get(0).fitness;
 		int index = 0;
-		for(int i = 1; i < NUMBER_OF_BEST; i++) {
-			if(min >= best.get(i).fitness) {
+		for (int i = 1; i < NUMBER_OF_BEST; i++) {
+			if (min >= best.get(i).fitness) {
 				min = best.get(i).fitness;
 				index = i;
 			}
 		}
 
-		if(min < fitness) {
+		if (min < fitness) {
 			best.set(index, new Data(v, fitness, isSatisfied));
 		}
 	}
