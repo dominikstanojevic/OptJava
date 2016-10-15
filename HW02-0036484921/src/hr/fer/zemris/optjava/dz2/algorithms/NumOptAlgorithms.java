@@ -47,7 +47,7 @@ public class NumOptAlgorithms {
 	}
 
 	private static final int INCREMENT_MULTIPLIER = 2;
-	private static final double THRESHOLD = 1e-4;
+	private static final double THRESHOLD = 1e-2;
 
 	private static double bisectionSearch(
 			IFunction function, RealVector vector, RealVector d) {
@@ -88,7 +88,7 @@ public class NumOptAlgorithms {
 	}
 
 	private static boolean isOptimal(IFunction function, RealVector candidate) {
-		return Math.abs(function.gradientValueAt(candidate).getNorm()) < THRESHOLD;
+		return Math.abs(function.gradientValueAt(candidate).getNorm()) < 1E-6;
 	}
 
 	public static RealVector newtonAlgorithm(IHFunction function, int maxIterations) {

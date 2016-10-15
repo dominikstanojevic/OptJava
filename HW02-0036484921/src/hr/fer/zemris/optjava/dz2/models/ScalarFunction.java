@@ -10,16 +10,16 @@ import java.util.function.Function;
  */
 public class ScalarFunction implements IHFunction {
     private int numberOfVariables;
-    private Function<RealVector, Double> vauleAt;
+    private Function<RealVector, Double> valueAt;
     private Function<RealVector, RealVector> gradientAt;
     private Function<RealVector, RealMatrix> hessianAt;
 
     public ScalarFunction(
-            int numberOfVariables, Function<RealVector, Double> vauleAt,
+            int numberOfVariables, Function<RealVector, Double> valueAt,
             Function<RealVector, RealVector> gradientAt,
             Function<RealVector, RealMatrix> hessianAt) {
         this.numberOfVariables = numberOfVariables;
-        this.vauleAt = vauleAt;
+        this.valueAt = valueAt;
         this.gradientAt = gradientAt;
         this.hessianAt = hessianAt;
     }
@@ -32,17 +32,19 @@ public class ScalarFunction implements IHFunction {
     @Override
     public double valueAt(RealVector v) {
         checkVector(v);
-        return vauleAt.apply()
+        return valueAt.apply(v);
     }
 
     @Override
     public RealVector gradientValueAt(RealVector v) {
-        return null;
+        checkVector(v);
+        return gradientAt.apply(v);
     }
 
     @Override
     public RealMatrix getHessianMatrixAt(
             RealVector v) {
-        return null;
+        checkVector(v);
+        return hessianAt.apply(v);
     }
 }
