@@ -27,7 +27,7 @@ public class NumOptAlgorithms {
 	private static RealVector lineSearchAlgorithm(
 			IFunction function, int maxIterations,
 			Function<RealVector, RealVector> directionFunction) {
-		Objects.requireNonNull(function, "Function cannot be null.");
+		Objects.requireNonNull(function, "ScalarFunction cannot be null.");
 
 		RealVector candidate = generateCandidate(function.getNumberOfVariables());
 		System.out.println("Generated candidate: " + candidate.toString());

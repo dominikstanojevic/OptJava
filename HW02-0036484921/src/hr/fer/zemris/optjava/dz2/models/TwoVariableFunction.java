@@ -38,13 +38,7 @@ public class TwoVariableFunction implements IHFunction {
 		return valueAt.apply(v.getEntry(0), v.getEntry(1));
 	}
 
-	private void checkVector(RealVector v) {
-		Objects.requireNonNull(v, "Vector cannot be null");
-		if (v.getDimension() != NUMBER_OF_VARIABLES) {
-			throw new IllegalArgumentException(
-					"Expect 2-dimensional vector, got: " + v.getDimension());
-		}
-	}
+
 
 	@Override
 	public RealVector gradientValueAt(RealVector v) {

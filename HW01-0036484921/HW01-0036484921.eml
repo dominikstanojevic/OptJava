@@ -2,5 +2,6 @@
 <component inherit-compiler-output="true" inheritJdk="true">
 	<output-test url="file://$MODULE_DIR$/../out/test/HW01-0036484921"/>
 	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$/.."/>
 	<contentEntry url="file://$MODULE_DIR$"/>
 </component>
