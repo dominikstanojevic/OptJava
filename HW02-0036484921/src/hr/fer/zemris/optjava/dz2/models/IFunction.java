@@ -15,10 +15,5 @@ public interface IFunction {
     RealVector gradientValueAt(RealVector v);
 
     default void checkVector(RealVector v) {
-        Objects.requireNonNull(v, "Vector cannot be null");
-        if (v.getDimension() != getNumberOfVariables()) {
-            throw new IllegalArgumentException(
-                    "Expect 2-dimensional vector, got: " + v.getDimension());
-        }
     }
 }

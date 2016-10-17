@@ -30,8 +30,13 @@ public class SecondFunction {
                 vector -> MatrixUtils.createRealMatrix(new double[][] { { 2, 0 }, { 0, 20 } });
 
         IHFunction function = new ScalarFunction(2, f, gradient, hessian);
-        //NumOptAlgorithms.gradientDescentAlgorithm(function, 100_000);
+        RealVector result;
+        result = NumOptAlgorithms
+                .gradientDescentAlgorithm(function, 1_000, function.getNumberOfVariables());
+        FirstFunction.printGradientValue(function, result);
         System.out.println("-----------------------------------------------");
-        NumOptAlgorithms.newtonAlgorithm(function, 100_000);
+        result = NumOptAlgorithms
+                .newtonAlgorithm(function, 1_000, function.getNumberOfVariables());
+        FirstFunction.printGradientValue(function, result);
     }
 }

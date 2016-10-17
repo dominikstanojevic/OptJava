@@ -11,11 +11,11 @@ import java.util.List;
 /**
  * Created by Dominik on 15.10.2016..
  */
-public class CompositeFunction implements IHFunction {
+public class FunctionAdder implements IHFunction {
     private int numberOfVariables;
     private List<IHFunction> functions = new ArrayList<>();
 
-    public CompositeFunction(int numberOfVariables) {
+    public FunctionAdder(int numberOfVariables) {
         this.numberOfVariables = numberOfVariables;
     }
 

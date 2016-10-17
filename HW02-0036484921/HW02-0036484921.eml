@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inherit-compiler-output="true" inheritJdk="true">
+	<output-test url="file://$MODULE_DIR$/../out/test/HW02-0036484921"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="commons-math3-3.6.1.jar" scope="COMPILE">
+		<srcroot url="jar://$MODULE_DIR$/lib/commons-math3-3.6.1-sources.jar!/"/>
+		<relative-module-src project-related="jar://$PROJECT_DIR$/HW02-0036484921/lib/commons-math3-3.6.1-sources.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/HW02-0036484921/lib/commons-math3-3.6.1.jar!/"/>
+		<relative-module-javadoc project-related="jar://$PROJECT_DIR$/HW02-0036484921/lib/commons-math3-3.6.1-javadoc.jar!/"/>
+	</lib>
+</component>

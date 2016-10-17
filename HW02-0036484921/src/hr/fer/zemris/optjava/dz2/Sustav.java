@@ -1,7 +1,6 @@
 package hr.fer.zemris.optjava.dz2;
 
-import hr.fer.zemris.optjava.dz2.algorithms.NumOptAlgorithms;
-import hr.fer.zemris.optjava.dz2.models.CompositeFunction;
+import hr.fer.zemris.optjava.dz2.models.FunctionAdder;
 import hr.fer.zemris.optjava.dz2.models.IHFunction;
 import hr.fer.zemris.optjava.dz2.models.ScalarFunction;
 import org.apache.commons.math3.linear.ArrayRealVector;
@@ -9,10 +8,6 @@ import org.apache.commons.math3.linear.MatrixUtils;
 import org.apache.commons.math3.linear.RealMatrix;
 import org.apache.commons.math3.linear.RealVector;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.List;
 import java.util.function.Function;
 
 /**
@@ -20,45 +15,7 @@ import java.util.function.Function;
  */
 public class Sustav {
     public static void main(String[] args) {
-        if (args.length != 3) {
-            System.err.println("Invalid number of command line arguments. Expected 3, given:" +
-                               args.length);
-            return;
-        }
-
-        double[][] data;
-        try {
-            data = loadData(args[2]);
-        } catch (IOException e) {
-            System.err.println(e.getMessage());
-            return;
-        }
-
-        CompositeFunction cf = new CompositeFunction(10);
-        for (double[] row : data) {
-            IHFunction function = createFunction(row);
-            cf.addFunction(function);
-        }
-
-        int numberOfIteration = Integer.parseInt(args[1]);
-        String algorithm = args[0].trim();
-
-        RealVector result;
-        switch (algorithm) {
-            case "grad":
-                result = NumOptAlgorithms.gradientDescentAlgorithm(cf, numberOfIteration);
-                break;
-            case "newton":
-                result = NumOptAlgorithms.newtonAlgorithm(cf, numberOfIteration);
-                break;
-            default:
-                throw new IllegalArgumentException("Invalid algorithm string. Possible " +
-                                                   "algorithms are grad and newton. Given: " +
-                                                   algorithm);
-        }
-
-        double error = Math.abs(cf.valueAt(result));
-        System.out.println("Error = " + error);
+        Environment.run(args, 10, 10, 11, row -> createFunction(row), 10);
     }
 
     private static IHFunction createFunction(double[] row) {
@@ -98,36 +55,5 @@ public class Sustav {
 
         ScalarFunction f = new ScalarFunction(row.length - 1, function, gradient, hessian);
         return f;
-    }
-
-    private static double[][] loadData(String path) throws IOException {
-        List<String> lines = Files.readAllLines(Paths.get(path));
-        double[][] values = new double[10][11];
-
-        int r = 0;
-        for (String l : lines) {
-            String line = l.trim();
-            if (line.startsWith("#")) {
-                continue;
-            }
-
-            line = line.replaceAll("\\[", "");
-            line = line.replaceAll("\\]", "");
-            String[] data = line.split(",");
-
-            double[] row = new double[11];
-            for (int i = 0; i < 11; i++) {
-                if (i == 10) {
-                    row[0] = -Double.parseDouble(data[i]);
-                } else {
-                    row[i + 1] = Double.parseDouble(data[i]);
-                }
-            }
-
-            values[r] = row;
-            r++;
-        }
-
-        return values;
     }
 }
