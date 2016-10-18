@@ -52,7 +52,7 @@ public class Environment {
                                                    algorithm);
         }
 
-        double error = Math.abs(f.valueAt(result));
+        double error = Math.sqrt(Math.abs(f.valueAt(result)) / variables);
         System.out.println("Error = " + error);
     }
 

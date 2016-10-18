@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5735f8bc-8679-434c-b01f-48fe7dc5ee32" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/models/LinearFunction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/models/TwoVariableFunction.java" afterPath="" />
+    <list default="true" id="5735f8bc-8679-434c-b01f-48fe7dc5ee32" name="Default" comment="Fixed error calculation.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/Prijenosna.java" afterPath="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/Prijenosna.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/Prijenosna2.java" afterPath="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/Prijenosna2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/assignments/FirstFunction.java" afterPath="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/assignments/FirstFunction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/assignments/SecondFunction.java" afterPath="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/assignments/SecondFunction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/models/SquareFunction.java" afterPath="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/models/SquareFunction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/Environment.java" afterPath="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/Environment.java" />
     </list>
     <ignored path="workspace.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,63 +24,21 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="autoscrollToSource" value="true" />
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="workspace" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Prijenosna.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/Prijenosna.java">
+      <file leaf-file-name="Environment.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/Environment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SquareFunction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/models/SquareFunction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Prijenosna2.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/Prijenosna2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SecondFunction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/assignments/SecondFunction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FirstFunction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/assignments/FirstFunction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+            <state relative-caret-position="765">
+              <caret line="54" column="72" selection-start-line="54" selection-start-column="72" selection-end-line="54" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -145,7 +97,6 @@
         <option value="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/models/CompositeFunction.java" />
         <option value="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/models/ScalarFunction.java" />
         <option value="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/models/FunctionAdder.java" />
-        <option value="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/Environment.java" />
         <option value="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/Sustav.java" />
         <option value="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/models/IFunction.java" />
         <option value="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/models/AbsFunction.java" />
@@ -155,6 +106,7 @@
         <option value="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/assignments/FirstFunction.java" />
         <option value="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/assignments/SecondFunction.java" />
         <option value="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/Prijenosna2.java" />
+        <option value="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/Environment.java" />
       </list>
     </option>
   </component>
@@ -230,6 +182,12 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
+      <pane id="Scratches">
+        <subPane />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -267,12 +225,6 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
-      <pane id="Scratches">
-        <subPane />
       </pane>
     </panes>
   </component>
@@ -855,7 +807,10 @@
       <workItem from="1476617172486" duration="802000" />
       <workItem from="1476708626733" duration="23326000" />
       <workItem from="1476740290104" duration="42000" />
-      <workItem from="1476768675197" duration="2001000" />
+      <workItem from="1476768675197" duration="2023000" />
+      <workItem from="1476770739084" duration="349000" />
+      <workItem from="1476771480651" duration="155000" />
+      <workItem from="1476772830658" duration="103000" />
     </task>
     <task id="LOCAL-00001" summary="First homework finished.">
       <created>1475850436435</created>
@@ -920,25 +875,32 @@
       <option name="project" value="LOCAL" />
       <updated>1476740321907</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Second homework.">
+      <created>1476770701508</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1476770701508</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106272000" />
+    <option name="totallyTimeSpent" value="106901000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33152762" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33152762" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.50875276" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33694476" sideWeight="0.49124727" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.48933902" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3369803" sideWeight="0.49124727" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1008,7 +970,9 @@
     <MESSAGE value="Part of the third assignment written." />
     <MESSAGE value="Solved third assignment of the second homework." />
     <MESSAGE value="Almost solved whole homework." />
-    <option name="LAST_COMMIT_MESSAGE" value="Almost solved whole homework." />
+    <MESSAGE value="Second homework." />
+    <MESSAGE value="Fixed error calculation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed error calculation." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1289,22 +1253,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/models/AbsFunction.java" />
-    <entry file="file://$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/Environment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="90" column="70" selection-start-line="90" selection-start-column="70" selection-end-line="90" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/Prijenosna2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="716">
           <caret line="49" column="63" selection-start-line="49" selection-start-column="63" selection-end-line="49" selection-end-column="63" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1313,9 +1267,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1327,14 +1278,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/models/LinearFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/models/LinearFunction.java" />
     <entry file="file://$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/assignments/FirstFunction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1351,18 +1295,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/models/TwoVariableFunction.java">
+    <entry file="file://$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/models/TwoVariableFunction.java" />
+    <entry file="file://$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/models/SquareFunction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-          <folding />
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/models/SquareFunction.java">
+    <entry file="file://$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/Prijenosna.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        <state relative-caret-position="68">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1371,21 +1318,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/Prijenosna2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="17">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/Prijenosna.java">
+    <entry file="file://$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/Environment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="765">
+          <caret line="54" column="72" selection-start-line="54" selection-start-column="72" selection-end-line="54" selection-end-column="72" />
+          <folding />
         </state>
       </provider>
     </entry>
