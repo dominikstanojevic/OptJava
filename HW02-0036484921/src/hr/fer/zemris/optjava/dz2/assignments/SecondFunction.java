@@ -3,14 +3,11 @@ package hr.fer.zemris.optjava.dz2.assignments;
 import hr.fer.zemris.optjava.dz2.algorithms.NumOptAlgorithms;
 import hr.fer.zemris.optjava.dz2.models.IHFunction;
 import hr.fer.zemris.optjava.dz2.models.ScalarFunction;
-import hr.fer.zemris.optjava.dz2.models.TwoVariableFunction;
 import org.apache.commons.math3.linear.ArrayRealVector;
 import org.apache.commons.math3.linear.MatrixUtils;
 import org.apache.commons.math3.linear.RealMatrix;
 import org.apache.commons.math3.linear.RealVector;
 
-import java.util.function.BiFunction;
-import java.util.function.BinaryOperator;
 import java.util.function.Function;
 
 /**

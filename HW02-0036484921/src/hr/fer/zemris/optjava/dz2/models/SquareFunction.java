@@ -35,13 +35,10 @@ public class SquareFunction implements IHFunction {
     @Override
     public RealMatrix getHessianMatrixAt(
             RealVector v) {
-        RealVector vector = v.add(delta);
-        RealVector diff = gradientValueAt(vector).subtract(gradientValueAt(v)).ebeDivide
-                (delta.mapMultiply(2));
-
-        RealMatrix column = MatrixUtils.createColumnRealMatrix(diff.toArray());
+        RealMatrix column =
+                MatrixUtils.createColumnRealMatrix(function.gradientValueAt(v).toArray());
         RealMatrix row = column.transpose();
 
-        return column.multiply(row);
+        return column.multiply(row).scalarMultiply(2);
     }
 }

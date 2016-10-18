@@ -11,11 +11,6 @@ import org.apache.commons.math3.linear.RealVector;
 
 import java.util.function.Function;
 
-/**
- * Ako netko uživa u pisanju matematičkih funkcija u javi, slobodno može napisati hesseovu
- * matricu (rješenje se nalazi u file-u datoteke/bolesnoća.nb - Mathematica notebook). Meni
- * se fakat ne da.
- */
 public class Prijenosna {
     public static final int NUMBER_OF_VARIABLES = 6;
 
