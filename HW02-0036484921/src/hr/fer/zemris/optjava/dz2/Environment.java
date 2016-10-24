@@ -56,7 +56,7 @@ public class Environment {
         System.out.println("Error = " + error);
     }
 
-    public static double[][] loadData(String path, int rows, int columns) throws IOException {
+    private static double[][] loadData(String path, int rows, int columns) throws IOException {
         List<String> lines = Files.readAllLines(Paths.get(path));
         double[][] values = new double[rows][columns];
 
