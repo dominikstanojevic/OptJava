@@ -9,7 +9,7 @@ import hr.fer.zemris.optjava.dz3.models.solutions.AbstractSolution;
  * Created by Dominik on 19.10.2016..
  */
 public class GreedyAlgorithm<T extends AbstractSolution> implements IOptAlgorithm<T> {
-    private static final int ITERATIONS = 100_000_000;
+    private static final int ITERATIONS = 100_000;
     private static final double THRESHOLD = 1e-6;
 
     private IDecoder<T> decoder;

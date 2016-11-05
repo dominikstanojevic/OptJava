@@ -25,14 +25,29 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Created by Dominik on 19.10.2016..
+ * Needed command-line parameters are: [METHOD] [ALGORITHM] [PATH]
+ * Method - "decimal" or "binary" (binary uses Gray code)
+ * Algorithm - "greedy" or "annealing"
+ * Path - path to the file
+ *
+ * @author Dominik Stanojević
  */
 public class RegresijaSustava {
-    private static final double DELTA = 0.1;
     private static final Random RANDOM = new Random();
 
+    public static final int NUMBER_OF_VARIABLES = 6;
+    public static final double DELTA = 0.1;
+    public static final int VECTOR_SIZE = 30; //only for bitvectors
+    public static final double MIN = -10;
+    public static final double MAX = 10;
+
+    public static final double ALPHA = 0.992; //not necessary
+    public static final double STARTING_TEMPERATURE = 1000;
+    public static final int INNER_LOOPS = 5000;
+    public static final int OUTER_LOOPS = 2500;
+
     public static void main(String[] args) throws IOException {
-        double[][] data = loadData(args[1], 20, 6);
+        double[][] data = loadData(args[2], 20, 6);
 
         IFunction function = vector -> {
             double total = 0;
@@ -49,38 +64,49 @@ public class RegresijaSustava {
             return total;
         };
 
-        DoubleArraySolution solution = new DoubleArraySolution(6);
-        //BitVectorSolution solution = new BitVectorSolution(6*30);
-        double[] min = new double[6];
-        Arrays.fill(min, -10);
-        double[] max = new double[6];
-        Arrays.fill(max, 10);
-        solution.randomize(RANDOM, min, max);
-        //solution.randomize(RANDOM);
-
-        double[] deltas = new double[6];
-        Arrays.fill(deltas, DELTA);
-
-        int[] bits = new int[6];
-        Arrays.fill(bits, 30);
-
-        IDecoder<DoubleArraySolution> decoder = new PassThroughDecoder();
-        //IDecoder<BitVectorSolution> decoder = new GrayBinaryDecoder(min, max, bits, 6);
-
-        INeighborhood<DoubleArraySolution> neighborhood = new DoubleArrayNormNeighborhood(deltas, RANDOM);
-        //INeighborhood<BitVectorSolution> neighborhood = new BitVectorNeighborhood(bits, RANDOM);
-
-        IOptAlgorithm<DoubleArraySolution> algorithm = getAlgorithm(args[0], function, solution, decoder, neighborhood);
-        //IOptAlgorithm<BitVectorSolution> algorithm = getAlgorithm(args[0], function, solution, decoder, neighborhood);
-
-        solution = algorithm.run();
+        IOptAlgorithm<? extends AbstractSolution> algorithm = getAlgorithm(args[0], args[1], function);
+        AbstractSolution solution = algorithm.run();
+        
         System.out.println(solution);
         double error = calculateError(solution);
         System.out.println("Error: " + error);
     }
 
     public static <T extends AbstractSolution> double calculateError(T solution) {
-        return Math.sqrt(solution.fitness / 6);
+        return Math.sqrt(Math.abs(solution.fitness) / 20);
+    }
+
+    private static IOptAlgorithm<? extends AbstractSolution> getAlgorithm(
+            String method, String algorithm, IFunction function) {
+        double[] min = new double[NUMBER_OF_VARIABLES];
+        Arrays.fill(min, MIN);
+        double[] max = new double[NUMBER_OF_VARIABLES];
+        Arrays.fill(max, MAX);
+
+        double[] deltas = new double[NUMBER_OF_VARIABLES];
+        Arrays.fill(deltas, DELTA);
+
+        switch (method) {
+            case "decimal":
+                DoubleArraySolution solutionDA = new DoubleArraySolution(6);
+                solutionDA.randomize(RANDOM, min, max);
+
+                IDecoder<DoubleArraySolution> decoderDA = new PassThroughDecoder();
+                INeighborhood<DoubleArraySolution> neighborhoodDA = new DoubleArrayNormNeighborhood(deltas, RANDOM);
+                return getAlgorithm(algorithm, function, solutionDA, decoderDA, neighborhoodDA);
+            case "binary":
+                BitVectorSolution solutionBV = new BitVectorSolution(NUMBER_OF_VARIABLES * VECTOR_SIZE);
+                solutionBV.randomize(RANDOM);
+
+                int[] bits = new int[NUMBER_OF_VARIABLES];
+                Arrays.fill(bits, VECTOR_SIZE);
+
+                IDecoder<BitVectorSolution> decoderBV = new GrayBinaryDecoder(min, max, bits, NUMBER_OF_VARIABLES);
+                INeighborhood<BitVectorSolution> neighborhoodBV = new BitVectorNeighborhood(bits, RANDOM);
+                return getAlgorithm(algorithm, function, solutionBV, decoderBV, neighborhoodBV);
+            default:
+                throw new IllegalArgumentException("Method does not exist.");
+        }
     }
 
     private static <T extends AbstractSolution> IOptAlgorithm<T> getAlgorithm(
@@ -89,7 +115,7 @@ public class RegresijaSustava {
             case "greedy":
                 return new GreedyAlgorithm<>(decoder, neighborhood, solution, function, true);
             case "annealing":
-                ITempSchedule schedule = new GeometricTempSchedule(1000, 5000, 2500);
+                ITempSchedule schedule = new GeometricTempSchedule(STARTING_TEMPERATURE, INNER_LOOPS, OUTER_LOOPS);
                 return new SimulatedAnnealingAlgorithm<>(decoder, neighborhood, solution, function, true, schedule,
                         RANDOM);
             default:

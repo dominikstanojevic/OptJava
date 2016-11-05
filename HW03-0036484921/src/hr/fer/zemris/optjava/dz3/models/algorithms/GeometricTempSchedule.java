@@ -11,7 +11,6 @@ public class GeometricTempSchedule implements ITempSchedule {
     private int outerLimit;
 
     private static final double THRESHOLD = 0.1;
-    private int step = 0;
 
     public GeometricTempSchedule(double alpha, double tInitial, int innerLimit, int outerLimit) {
         this.alpha = alpha;
