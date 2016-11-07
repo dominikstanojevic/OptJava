@@ -21,6 +21,14 @@ public class Bin implements Iterable<Stick> {
     public Bin() {
     }
 
+    public Bin duplicate() {
+        Bin copy = new Bin();
+        copy.currentHeight = currentHeight;
+        copy.sticks = new ArrayList<>(sticks);
+
+        return copy;
+    }
+
     public boolean addStick(Stick stick) {
         int stickHeight = stick.getHeight();
 

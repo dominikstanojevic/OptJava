@@ -24,7 +24,6 @@ public class SteadyStateGA<T extends AbstractSolution> implements IAlgorithm<T> 
     private IMutationOperator<T> mutationOperator;
     private int populationSize;
     private Supplier<T> solutionSupplier;
-    private double minError;
     private int maxGenerations;
     private ISelection<T> selection;
     private double elitistRate;
@@ -34,14 +33,13 @@ public class SteadyStateGA<T extends AbstractSolution> implements IAlgorithm<T> 
 
     public SteadyStateGA(
             IDecoder<T> decoder, ICrossoverOperator<T> crossoverOperator, IMutationOperator<T> mutationOperator,
-            int populationSize, Supplier<T> solutionSupplier, double minError, int maxGenerations,
+            int populationSize, Supplier<T> solutionSupplier, int maxGenerations,
             ISelection<T> selection, double elitistRate, IFunction function, boolean minimize, boolean switchParent) {
         this.decoder = decoder;
         this.crossoverOperator = crossoverOperator;
         this.mutationOperator = mutationOperator;
         this.populationSize = populationSize;
         this.solutionSupplier = solutionSupplier;
-        this.minError = minError;
         this.maxGenerations = maxGenerations;
         this.selection = selection;
         this.elitistRate = elitistRate;
@@ -52,17 +50,19 @@ public class SteadyStateGA<T extends AbstractSolution> implements IAlgorithm<T> 
 
     @Override
     public T run() {
-        int generation = 0;
-
         Population<T> population = new Population<>(populationSize);
         population.fill(solutionSupplier);
 
         evaluate(population);
 
-        System.out.println("Initial: ");
-        printBest(population, 0);
+        T best = population.getBest();
 
-        while (!conditionsSatisfied(generation, population)) {
+        System.out.println("Initial: ");
+        printSolution(best, 0);
+        System.out.println("-----------------------------------------");
+
+        int iteration = 1;
+        while (!conditionsSatisfied(iteration)) {
             Pair<T, T> parents = getParents(population);
             Pair<T, T> children = crossoverOperator.getChildren(parents, RANDOM);
 
@@ -72,16 +72,19 @@ public class SteadyStateGA<T extends AbstractSolution> implements IAlgorithm<T> 
             switchSolutions(population, children.first);
             switchSolutions(population, children.second);
 
-            printBest(population, generation);
-            generation++;
+            T newBest = population.getBest();
+            if (newBest.fitness > best.fitness) {
+                best = newBest;
+                printSolution(best, iteration);
+            }
+            iteration++;
         }
 
-        return population.getBest();
+        return best;
     }
 
-    private void printBest(Population<T> population, int generation) {
-        T best = population.getBest();
-        System.out.println("Iteration: " + generation + ", " + best.toString() + "fitness: " + best.fitness);
+    private void printSolution(T solution, int iteration) {
+        System.out.println("Iteration: " + iteration + ", fitness: " + solution.fitness + ", " + solution.toString());
     }
 
     private void switchSolutions(Population<T> population, T child) {
@@ -128,7 +131,7 @@ public class SteadyStateGA<T extends AbstractSolution> implements IAlgorithm<T> 
         return fitness;
     }
 
-    private boolean conditionsSatisfied(int generation, Population<T> population) {
+    private boolean conditionsSatisfied(int generation) {
         if (generation >= maxGenerations) {
             return true;
         }

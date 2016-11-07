@@ -32,7 +32,6 @@ public class BoxFilling {
     public static final double EXPONENT = 1.5;
     public static final double MUTATION_RATE = 0.66;
     public static final int POPULATION_SIZE = 100;
-    public static final double MIN_ERROR = 3;
     public static final int MAX_GENERATIONS = 1000;
     public static final int TOURNAMENT_SELECTION = 3;
     public static final double ELITIST_RATE = 0.02;
@@ -40,7 +39,6 @@ public class BoxFilling {
     static {
         Bin.maxHeight = 20;
     }
-
 
     public static void main(String[] args) throws IOException {
         List<Stick> sticks = loadSticks(args[0]);
@@ -63,12 +61,14 @@ public class BoxFilling {
             bc.randomize(sticks);
             return bc;
         };
-        ISelection<BinContainer> selection = new TournamentSelection<>(3);
+        ISelection<BinContainer> selection = new TournamentSelection<>(TOURNAMENT_SELECTION);
 
-
-        SteadyStateGA<BinContainer> ga = new SteadyStateGA<>(decoder, crossoverOperator, mutationOperator,
-                POPULATION_SIZE, supplier, MIN_ERROR, MAX_GENERATIONS, selection, ELITIST_RATE, function, false, true);
+        SteadyStateGA<BinContainer> ga =
+                new SteadyStateGA<>(decoder, crossoverOperator, mutationOperator, POPULATION_SIZE, supplier,
+                        MAX_GENERATIONS, selection, ELITIST_RATE, function, false, true);
         BinContainer solution = ga.run();
+        System.out.println("----------------------------------------------------------------");
+        System.out.println("Final solution:");
         System.out.println("Size: " + solution.size());
         System.out.println(solution.toString());
     }
@@ -80,7 +80,7 @@ public class BoxFilling {
         String[] data = line.split(",");
 
         List<Stick> sticks = new ArrayList<>();
-        for(String s : data) {
+        for (String s : data) {
             int height = Integer.parseInt(s.trim());
             sticks.add(new Stick(height));
         }

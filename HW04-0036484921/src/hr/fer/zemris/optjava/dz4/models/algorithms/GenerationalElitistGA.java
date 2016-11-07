@@ -96,7 +96,11 @@ public class GenerationalElitistGA<T extends AbstractSolution> implements IAlgor
 
     private Pair<T, T> getParents(Population<T> population) {
         T first = selection.selectBest(population, RANDOM);
-        T second = selection.selectBest(population, RANDOM);
+
+        T second;
+        do {
+            second = selection.selectBest(population, RANDOM);
+        } while (first.equals(second));
 
         return new Pair<>(first, second);
     }

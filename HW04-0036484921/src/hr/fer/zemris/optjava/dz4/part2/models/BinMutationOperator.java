@@ -22,6 +22,8 @@ public class BinMutationOperator implements IMutationOperator<BinContainer> {
         List<Stick> unassigned = destroyBins(solution, random);
 
         solution.addStick(solution.rearrange(unassigned));
+
+        int n = solution.numberOfSticks();
     }
 
     private List<Stick> destroyBins(BinContainer container, Random random) {

@@ -7,6 +7,7 @@ import hr.fer.zemris.optjava.dz4.models.decoders.IDecoder;
 import hr.fer.zemris.optjava.dz4.models.decoders.PassThroughDecoder;
 import hr.fer.zemris.optjava.dz4.models.mutations.DoubleArraySolutionNormalMutationOperator;
 import hr.fer.zemris.optjava.dz4.models.mutations.IMutationOperator;
+import hr.fer.zemris.optjava.dz4.models.selections.TournamentSelection;
 import hr.fer.zemris.optjava.dz4.models.solutions.AbstractSolution;
 import hr.fer.zemris.optjava.dz4.models.solutions.DoubleArraySolution;
 import hr.fer.zemris.optjava.dz4.models.algorithms.GenerationalElitistGA;
@@ -29,10 +30,11 @@ public class GeneticAlgorithm {
     public static final double[] MAX = new double[NUMBER_OF_VARIABLES];
     public static final double MIN_BOUND = -5;
     public static final double MAX_BOUND = 5;
-    public static final int MAX_ITERATIONS = 100_000;
-    public static final double SIGMA = 0.1;
+    public static final int MAX_ITERATIONS = 10_000;
+    public static final double SIGMA = 1e-2;
     public static final double ELITIST_RATE = 0.02;
     public static final double ALPHA = 0.5;
+    public static final int TOURNAMENT_SIZE = 10;
 
     static {
         Arrays.fill(MIN, MIN_BOUND);
@@ -65,7 +67,7 @@ public class GeneticAlgorithm {
         ICrossoverOperator<DoubleArraySolution> crossoverOperator =
                 new DoubleArrayBLXCrossoverOperator(supplier, ALPHA);
         IMutationOperator<DoubleArraySolution> mutationOperator = new DoubleArraySolutionNormalMutationOperator(SIGMA);
-        ISelection selection = new RouletteWheelSelection();
+        ISelection<DoubleArraySolution> selection = new TournamentSelection<>(TOURNAMENT_SIZE);
 
         GenerationalElitistGA ga =
                 new GenerationalElitistGA(decoder, crossoverOperator, mutationOperator, POPULATION_SIZE, supplier,

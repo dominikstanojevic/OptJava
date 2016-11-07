@@ -9,6 +9,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 /**
  * Created by Dominik on 4.11.2016..
@@ -22,12 +23,11 @@ public class BinCrossoverOperator implements ICrossoverOperator<BinContainer> {
         BinContainer secondClone = parents.second.duplicate();
 
         Pair<Integer, Integer> firstPoints = getPoints(random, firstClone.size());
-        List<Bin> firstTransferring =
-                new ArrayList<>(firstClone.chromosome.subList(firstPoints.first, firstPoints.second));
+        List<Bin> firstTransferring = copySubList(firstClone.chromosome.subList(firstPoints.first, firstPoints.second));
 
         Pair<Integer, Integer> secondPoints = getPoints(random, secondClone.size());
         List<Bin> secondTransferring =
-                new ArrayList<>(secondClone.chromosome.subList(secondPoints.first, secondPoints.second));
+                copySubList(secondClone.chromosome.subList(secondPoints.first, secondPoints.second));
 
         copyBinsToContainer(secondClone, firstTransferring, secondPoints.first);
         copyBinsToContainer(firstClone, secondTransferring, firstPoints.second);
@@ -40,6 +40,9 @@ public class BinCrossoverOperator implements ICrossoverOperator<BinContainer> {
 
         firstClone.addStick(firstAfter);
         secondClone.addStick(secondAfter);
+
+        int n1 = firstClone.numberOfSticks();
+        int n2 = secondClone.numberOfSticks();
 
         return new Pair<>(firstClone, secondClone);
     }
@@ -66,8 +69,10 @@ public class BinCrossoverOperator implements ICrossoverOperator<BinContainer> {
                 Optional<Bin> removed =
                         container.chromosome.stream().filter(b -> !b.equals(bin) && b.contains(stick)).findFirst();
 
-                container.chromosome.remove(removed.get());
-                addUnassigned(unassigned, bins, removed.get());
+                if (removed.isPresent()) {
+                    container.chromosome.remove(removed.get());
+                    addUnassigned(unassigned, bins, removed.get());
+                }
 
             }
         }
@@ -82,5 +87,10 @@ public class BinCrossoverOperator implements ICrossoverOperator<BinContainer> {
                 unassigned.add(stick);
             }
         }
+    }
+
+    private List<Bin> copySubList(List<Bin> subList) {
+        List<Bin> copy = subList.stream().map(Bin::duplicate).collect(Collectors.toList());
+        return copy;
     }
 }

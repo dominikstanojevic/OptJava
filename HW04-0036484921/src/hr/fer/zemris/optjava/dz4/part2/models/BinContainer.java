@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Random;
 import java.util.StringJoiner;
+import java.util.stream.Collectors;
 
 /**
  * Created by Dominik on 4.11.2016..
@@ -24,7 +25,9 @@ public class BinContainer extends AbstractSolution<List<Bin>> {
     }
 
     public BinContainer duplicate() {
-        return new BinContainer(new ArrayList<>(chromosome));
+        List<Bin> copyChromosome = chromosome.stream().map(Bin::duplicate).collect(Collectors.toList());
+
+        return new BinContainer(copyChromosome);
     }
 
     public int size() {
@@ -39,7 +42,7 @@ public class BinContainer extends AbstractSolution<List<Bin>> {
     public void randomize(List<Stick> sticks) {
         Collections.shuffle(sticks);
 
-        for(Stick stick : sticks) {
+        for (Stick stick : sticks) {
             Bin bin = new Bin();
             bin.addStick(stick);
             chromosome.add(bin);
@@ -49,7 +52,7 @@ public class BinContainer extends AbstractSolution<List<Bin>> {
     @Override
     public String toString() {
         StringJoiner sj = new StringJoiner(", ", "[", "]");
-        for(Bin bin : chromosome) {
+        for (Bin bin : chromosome) {
             sj.add(bin.toString());
         }
 
@@ -82,7 +85,7 @@ public class BinContainer extends AbstractSolution<List<Bin>> {
         List<Stick> taken = new ArrayList<>();
         int total = 0;
 
-        int finish= Math.min(3, bin.size());
+        int finish = Math.min(3, bin.size());
         for (int i = 0; i < finish; i++) {
             Stick biggest = bin.findBiggest();
             bin.removeStick(biggest);
@@ -119,5 +122,9 @@ public class BinContainer extends AbstractSolution<List<Bin>> {
                 chromosome.add(newBin);
             }
         }
+    }
+
+    public int numberOfSticks() {
+        return chromosome.stream().mapToInt(b -> b.size()).sum();
     }
 }
