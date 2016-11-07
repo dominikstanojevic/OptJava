@@ -19,8 +19,8 @@ public class DoubleArrayBLXCrossoverOperator implements ICrossoverOperator<Doubl
     }
 
     @Override
-    public Pair<DoubleArraySolution> getChildren(
-            Pair<DoubleArraySolution> parents, Random random) {
+    public Pair<DoubleArraySolution, DoubleArraySolution> getChildren(
+            Pair<DoubleArraySolution, DoubleArraySolution> parents, Random random) {
         double[] firstParent = parents.first.chromosome;
         double[] secondParent = parents.second.chromosome;
 

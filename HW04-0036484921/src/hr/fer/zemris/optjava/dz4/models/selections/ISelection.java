@@ -10,5 +10,6 @@ import java.util.Random;
  * Created by Dominik on 25.10.2016..
  */
 public interface ISelection<T extends AbstractSolution> {
-    T select(Population<T> population, Random random);
+    T selectBest(Population<T> population, Random random);
+    T selectWorst(Population<T> population, Random random);
 }

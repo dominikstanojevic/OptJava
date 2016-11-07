@@ -30,6 +30,13 @@ public class Population<T extends AbstractSolution> implements Iterable<T> {
         }
     }
 
+    public void fill(Supplier<T> solutionSupplier) {
+        for (int i = 0; i < capacity; i++) {
+            T solution = solutionSupplier.get();
+            population.add(solution);
+        }
+    }
+
     public int size() {
         return population.size();
     }

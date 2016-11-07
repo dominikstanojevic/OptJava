@@ -89,7 +89,7 @@ public class NumOptAlgorithms {
             lambda = (lower + upper) / 2;
             double result = getDerivative(function, vector, d, lambda);
 
-            if (result < THRESHOLD) {
+            if (Math.abs(result) < 1e-10) {
                 break;
             } else if (result < 0) {
                 lower = lambda;
@@ -112,7 +112,7 @@ public class NumOptAlgorithms {
     }
 
     private static RealVector getGradientDescent(IFunction function, RealVector values) {
-        return function.gradientValueAt(values).mapMultiply(-1);
+        return function.gradientValueAt(values).mapMultiply(-1).unitVector();
     }
 
     private static boolean isOptimal(IFunction function, RealVector candidate) {

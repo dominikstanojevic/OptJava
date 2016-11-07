@@ -14,9 +14,9 @@ import java.util.Random;
 import java.util.function.Supplier;
 
 /**
- * Created by Dominik on 25.10.2016..
+ * Created by Dominik on 7.11.2016..
  */
-public class GenerationalElitistGA<T extends AbstractSolution> implements IAlgorithm<T> {
+public class SteadyStateGA<T extends AbstractSolution> implements IAlgorithm<T> {
     private static final Random RANDOM = new Random();
 
     private IDecoder<T> decoder;
@@ -30,11 +30,12 @@ public class GenerationalElitistGA<T extends AbstractSolution> implements IAlgor
     private double elitistRate;
     private IFunction function;
     private boolean minimize;
+    private boolean switchParent;
 
-    public GenerationalElitistGA(
+    public SteadyStateGA(
             IDecoder<T> decoder, ICrossoverOperator<T> crossoverOperator, IMutationOperator<T> mutationOperator,
             int populationSize, Supplier<T> solutionSupplier, double minError, int maxGenerations,
-            ISelection<T> selection, double elitistRate, IFunction function, boolean minimize) {
+            ISelection<T> selection, double elitistRate, IFunction function, boolean minimize, boolean switchParent) {
         this.decoder = decoder;
         this.crossoverOperator = crossoverOperator;
         this.mutationOperator = mutationOperator;
@@ -46,40 +47,49 @@ public class GenerationalElitistGA<T extends AbstractSolution> implements IAlgor
         this.elitistRate = elitistRate;
         this.function = function;
         this.minimize = minimize;
+        this.switchParent = switchParent;
     }
 
     @Override
     public T run() {
         int generation = 0;
 
-        Population<T> population = new Population(populationSize);
-        population.generate(RANDOM, solutionSupplier);
+        Population<T> population = new Population<>(populationSize);
+        population.fill(solutionSupplier);
 
         evaluate(population);
+
+        System.out.println("Initial: ");
+        printBest(population, 0);
+
         while (!conditionsSatisfied(generation, population)) {
-            Population<T> newPop = new Population(populationSize);
+            Pair<T, T> parents = getParents(population);
+            Pair<T, T> children = crossoverOperator.getChildren(parents, RANDOM);
 
-            addToNewPopulation(population, newPop);
+            mutate(children);
+            evaluateChildren(children);
 
-            while (newPop.size() < populationSize) {
-                Pair<T, T> parents = getParents(population);
-                Pair<T, T> children = crossoverOperator.getChildren(parents, RANDOM);
-                mutate(children);
+            switchSolutions(population, children.first);
+            switchSolutions(population, children.second);
 
-                newPop.addSolution(children.first);
-                newPop.addSolution(children.second);
-            }
-
-            population = newPop;
-            evaluate(population);
+            printBest(population, generation);
             generation++;
-
-            T best = population.getBest();
-            System.out.println(
-                    "Generation: " + generation + ", " + best + ", error: " + function.valueAt(decoder.decode(best)));
         }
 
         return population.getBest();
+    }
+
+    private void printBest(Population<T> population, int generation) {
+        T best = population.getBest();
+        System.out.println("Iteration: " + generation + ", " + best.toString() + "fitness: " + best.fitness);
+    }
+
+    private void switchSolutions(Population<T> population, T child) {
+        T remove = selection.selectWorst(population, RANDOM);
+        if (switchParent || child.fitness > remove.fitness) {
+            population.removeSolution(remove);
+            population.addSolution(child);
+        }
     }
 
     private void mutate(Pair<T, T> children) {
@@ -87,32 +97,15 @@ public class GenerationalElitistGA<T extends AbstractSolution> implements IAlgor
         mutationOperator.mutate(children.second, RANDOM);
     }
 
-    private void addToNewPopulation(Population<T> old, Population<T> newPop) {
-        int n = (int) Math.round(elitistRate * populationSize);
-        for (int i = 0; i < n; i++) {
-            newPop.addSolution(old.get(i));
-        }
-    }
-
     private Pair<T, T> getParents(Population<T> population) {
         T first = selection.selectBest(population, RANDOM);
+
         T second = selection.selectBest(population, RANDOM);
+        while (second.equals(first)) {
+            second = selection.selectBest(population, RANDOM);
+        }
 
         return new Pair<>(first, second);
-    }
-
-    private boolean conditionsSatisfied(int generation, Population<T> population) {
-        if (generation >= maxGenerations) {
-            return true;
-        }
-
-        T best = population.getBest();
-        double error = function.valueAt(decoder.decode(best));
-        if (error <= minError) {
-            return true;
-        }
-
-        return false;
     }
 
     private void evaluate(Population<T> population) {
@@ -133,5 +126,18 @@ public class GenerationalElitistGA<T extends AbstractSolution> implements IAlgor
         }
 
         return fitness;
+    }
+
+    private boolean conditionsSatisfied(int generation, Population<T> population) {
+        if (generation >= maxGenerations) {
+            return true;
+        }
+
+        return false;
+    }
+
+    private void evaluateChildren(Pair<T, T> children) {
+        children.first.fitness = calculateFitness(children.first);
+        children.second.fitness = calculateFitness(children.second);
     }
 }

@@ -1,5 +1,8 @@
 package hr.fer.zemris.optjava.dz4.models.solutions;
 
+import hr.fer.zemris.optjava.dz4.part2.models.Stick;
+
+import java.util.List;
 import java.util.Objects;
 import java.util.Random;
 

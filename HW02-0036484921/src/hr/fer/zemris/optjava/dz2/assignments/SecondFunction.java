@@ -29,7 +29,7 @@ public class SecondFunction {
         IHFunction function = new ScalarFunction(2, f, gradient, hessian);
         RealVector result;
         result = NumOptAlgorithms
-                .gradientDescentAlgorithm(function, 1_000, function.getNumberOfVariables());
+                .gradientDescentAlgorithm(function, 100_000, function.getNumberOfVariables());
         FirstFunction.printGradientValue(function, result);
         System.out.println("-----------------------------------------------");
         result = NumOptAlgorithms
