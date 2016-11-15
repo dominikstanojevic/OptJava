@@ -1,7 +1,7 @@
-package hr.fer.zemris.optjava.dz4.models.selections;
+package hr.fer.zemris.optjava.dz5.models.selections;
 
-import hr.fer.zemris.optjava.dz4.models.Population;
-import hr.fer.zemris.optjava.dz4.models.solutions.AbstractSolution;
+import hr.fer.zemris.optjava.dz5.models.Population;
+import hr.fer.zemris.optjava.dz5.models.solutions.AbstractSolution;
 
 import java.util.HashSet;
 import java.util.Random;

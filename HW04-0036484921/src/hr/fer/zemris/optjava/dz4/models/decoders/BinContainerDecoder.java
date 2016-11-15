@@ -1,6 +1,8 @@
-package hr.fer.zemris.optjava.dz4.part2.models;
+package hr.fer.zemris.optjava.dz4.models.decoders;
 
 import hr.fer.zemris.optjava.dz4.models.decoders.IDecoder;
+import hr.fer.zemris.optjava.dz4.models.solutions.BinContainer;
+import hr.fer.zemris.optjava.dz4.part2.models.Bin;
 
 import java.util.List;
 

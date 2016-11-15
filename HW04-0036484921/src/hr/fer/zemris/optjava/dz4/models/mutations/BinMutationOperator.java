@@ -1,6 +1,9 @@
-package hr.fer.zemris.optjava.dz4.part2.models;
+package hr.fer.zemris.optjava.dz4.models.mutations;
 
 import hr.fer.zemris.optjava.dz4.models.mutations.IMutationOperator;
+import hr.fer.zemris.optjava.dz4.models.solutions.BinContainer;
+import hr.fer.zemris.optjava.dz4.part2.models.Bin;
+import hr.fer.zemris.optjava.dz4.part2.models.Stick;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -22,8 +25,6 @@ public class BinMutationOperator implements IMutationOperator<BinContainer> {
         List<Stick> unassigned = destroyBins(solution, random);
 
         solution.addStick(solution.rearrange(unassigned));
-
-        int n = solution.numberOfSticks();
     }
 
     private List<Stick> destroyBins(BinContainer container, Random random) {
@@ -34,7 +35,7 @@ public class BinMutationOperator implements IMutationOperator<BinContainer> {
         while (iterator.hasNext()) {
             Bin bin = iterator.next();
             if (random.nextDouble() <= mutationRate) {
-                bin.forEach(s -> unassigned.add(s));
+                bin.forEach(unassigned::add);
                 iterator.remove();
             }
         }

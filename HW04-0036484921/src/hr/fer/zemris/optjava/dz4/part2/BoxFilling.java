@@ -8,10 +8,10 @@ import hr.fer.zemris.optjava.dz4.models.mutations.IMutationOperator;
 import hr.fer.zemris.optjava.dz4.models.selections.ISelection;
 import hr.fer.zemris.optjava.dz4.models.selections.TournamentSelection;
 import hr.fer.zemris.optjava.dz4.part2.models.Bin;
-import hr.fer.zemris.optjava.dz4.part2.models.BinContainer;
-import hr.fer.zemris.optjava.dz4.part2.models.BinContainerDecoder;
-import hr.fer.zemris.optjava.dz4.part2.models.BinCrossoverOperator;
-import hr.fer.zemris.optjava.dz4.part2.models.BinMutationOperator;
+import hr.fer.zemris.optjava.dz4.models.solutions.BinContainer;
+import hr.fer.zemris.optjava.dz4.models.decoders.BinContainerDecoder;
+import hr.fer.zemris.optjava.dz4.models.crossovers.BinCrossoverOperator;
+import hr.fer.zemris.optjava.dz4.models.mutations.BinMutationOperator;
 import hr.fer.zemris.optjava.dz4.part2.models.Stick;
 
 import java.io.IOException;
@@ -19,72 +19,76 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Scanner;
-import java.util.Set;
-import java.util.function.Supplier;
+import java.util.Random;
+import java.util.function.Function;
 
 /**
- * Created by Dominik on 4.11.2016..
+ * Entry point for the second part of the homework. Expects one command line
+ * argument - path to the file. All other parameters can be set here.
  */
 public class BoxFilling {
-    public static final double EXPONENT = 1.5;
-    public static final double MUTATION_RATE = 0.66;
-    public static final int POPULATION_SIZE = 100;
-    public static final int MAX_GENERATIONS = 1000;
-    public static final int TOURNAMENT_SELECTION = 3;
-    public static final double ELITIST_RATE = 0.02;
+	public static final double EXPONENT = 1.5;
+	public static final double MUTATION_RATE = 0.66;
+	public static final int POPULATION_SIZE = 100;
+	public static final int MAX_GENERATIONS = 100;
+	public static final int TOURNAMENT_SELECTION = 3;
+	public static final boolean MINIMIZE = false;
 
-    static {
-        Bin.maxHeight = 20;
-    }
+	// replace solution in population even if it has bigger fitness than child
+	public static final boolean SWITCH_SOLUTION = true;
 
-    public static void main(String[] args) throws IOException {
-        List<Stick> sticks = loadSticks(args[0]);
-        IFunction function = vector -> {
-            double total = 0;
+	// also default values (if not initialized here)
+	static {
+		Bin.maxHeight = 20;
+		BinContainer.maximumReplacement = 3;
+	}
 
-            for (double number : vector) {
-                total += Math.pow(number, EXPONENT);
-            }
+	public static void main(String[] args) throws IOException {
+		List<Stick> sticks = loadSticks(args[0]);
+		IFunction function = vector -> {
+			double total = 0;
 
-            return total / vector.length;
-        };
+			for (double number : vector) {
+				total += Math.pow(number, EXPONENT);
+			}
 
-        IDecoder<BinContainer> decoder = new BinContainerDecoder();
-        ICrossoverOperator<BinContainer> crossoverOperator = new BinCrossoverOperator();
-        IMutationOperator<BinContainer> mutationOperator = new BinMutationOperator(MUTATION_RATE);
-        Supplier<BinContainer> supplier = () -> {
-            BinContainer bc = new BinContainer();
-            Collections.shuffle(sticks);
-            bc.randomize(sticks);
-            return bc;
-        };
-        ISelection<BinContainer> selection = new TournamentSelection<>(TOURNAMENT_SELECTION);
+			return total / vector.length;
+		};
 
-        SteadyStateGA<BinContainer> ga =
-                new SteadyStateGA<>(decoder, crossoverOperator, mutationOperator, POPULATION_SIZE, supplier,
-                        MAX_GENERATIONS, selection, ELITIST_RATE, function, false, true);
-        BinContainer solution = ga.run();
-        System.out.println("----------------------------------------------------------------");
-        System.out.println("Final solution:");
-        System.out.println("Size: " + solution.size());
-        System.out.println(solution.toString());
-    }
+		IDecoder<BinContainer> decoder = new BinContainerDecoder();
+		ICrossoverOperator<BinContainer> crossoverOperator = new BinCrossoverOperator();
+		IMutationOperator<BinContainer> mutationOperator = new BinMutationOperator(MUTATION_RATE);
+		Function<Random, BinContainer> supplier = random -> {
+			BinContainer bc = new BinContainer();
+			Collections.shuffle(sticks);
+			bc.randomize(sticks);
+			return bc;
+		};
+		ISelection<BinContainer> selection = new TournamentSelection<>(TOURNAMENT_SELECTION);
 
-    private static List<Stick> loadSticks(String path) throws IOException {
-        List<String> lines = Files.readAllLines(Paths.get(path));
+		SteadyStateGA<BinContainer> ga = new SteadyStateGA<>(decoder, crossoverOperator, mutationOperator,
+				POPULATION_SIZE, supplier, MAX_GENERATIONS, selection, function, MINIMIZE, SWITCH_SOLUTION);
 
-        String line = lines.get(0).trim().replaceAll("\\[", "").replaceAll("\\]", "").trim();
-        String[] data = line.split(",");
+		BinContainer solution = ga.run();
+		System.out.println("----------------------------------------------------------------");
+		System.out.println("Final solution:");
+		System.out.println("Size: " + solution.size());
+		System.out.println(solution.toString());
+	}
 
-        List<Stick> sticks = new ArrayList<>();
-        for (String s : data) {
-            int height = Integer.parseInt(s.trim());
-            sticks.add(new Stick(height));
-        }
+	private static List<Stick> loadSticks(String path) throws IOException {
+		List<String> lines = Files.readAllLines(Paths.get(path));
 
-        return sticks;
-    }
+		String line = lines.get(0).trim().replaceAll("\\[", "").replaceAll("\\]", "").trim();
+		String[] data = line.split(",");
+
+		List<Stick> sticks = new ArrayList<>();
+		for (String s : data) {
+			int height = Integer.parseInt(s.trim());
+			sticks.add(new Stick(height));
+		}
+
+		return sticks;
+	}
 }

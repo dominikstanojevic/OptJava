@@ -9,9 +9,8 @@ import hr.fer.zemris.optjava.dz4.models.mutations.IMutationOperator;
 import hr.fer.zemris.optjava.dz4.models.selections.ISelection;
 import hr.fer.zemris.optjava.dz4.models.solutions.AbstractSolution;
 
-import java.util.Iterator;
 import java.util.Random;
-import java.util.function.Supplier;
+import java.util.function.Function;
 
 /**
  * Created by Dominik on 25.10.2016..
@@ -23,7 +22,7 @@ public class GenerationalElitistGA<T extends AbstractSolution> implements IAlgor
     private ICrossoverOperator<T> crossoverOperator;
     private IMutationOperator<T> mutationOperator;
     private int populationSize;
-    private Supplier<T> solutionSupplier;
+    private Function<Random, T> solutionSupplier;
     private double minError;
     private int maxGenerations;
     private ISelection<T> selection;
@@ -33,7 +32,7 @@ public class GenerationalElitistGA<T extends AbstractSolution> implements IAlgor
 
     public GenerationalElitistGA(
             IDecoder<T> decoder, ICrossoverOperator<T> crossoverOperator, IMutationOperator<T> mutationOperator,
-            int populationSize, Supplier<T> solutionSupplier, double minError, int maxGenerations,
+            int populationSize, Function<Random, T> solutionSupplier, double minError, int maxGenerations,
             ISelection<T> selection, double elitistRate, IFunction function, boolean minimize) {
         this.decoder = decoder;
         this.crossoverOperator = crossoverOperator;
@@ -52,12 +51,12 @@ public class GenerationalElitistGA<T extends AbstractSolution> implements IAlgor
     public T run() {
         int generation = 0;
 
-        Population<T> population = new Population(populationSize);
-        population.generate(RANDOM, solutionSupplier);
+        Population<T> population = new Population<>(populationSize);
+        population.fill(RANDOM, solutionSupplier);
 
         evaluate(population);
         while (!conditionsSatisfied(generation, population)) {
-            Population<T> newPop = new Population(populationSize);
+            Population<T> newPop = new Population<>(populationSize);
 
             addToNewPopulation(population, newPop);
 
@@ -120,10 +119,7 @@ public class GenerationalElitistGA<T extends AbstractSolution> implements IAlgor
     }
 
     private void evaluate(Population<T> population) {
-        Iterator<T> iterator = population.iterator();
-        while (iterator.hasNext()) {
-            T solution = iterator.next();
-
+        for (T solution : population) {
             solution.fitness = calculateFitness(solution);
         }
 

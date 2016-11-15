@@ -1,8 +1,8 @@
-package hr.fer.zemris.optjava.dz4.part2.models;
+package hr.fer.zemris.optjava.dz4.models.solutions;
 
-import hr.fer.zemris.optjava.dz4.models.solutions.AbstractSolution;
+import hr.fer.zemris.optjava.dz4.part2.models.Bin;
+import hr.fer.zemris.optjava.dz4.part2.models.Stick;
 
-import javax.naming.OperationNotSupportedException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
  * Created by Dominik on 4.11.2016..
  */
 public class BinContainer extends AbstractSolution<List<Bin>> {
+    public static int maximumReplacement = 3;
 
     public BinContainer() {
         this(new ArrayList<>());
@@ -122,9 +123,5 @@ public class BinContainer extends AbstractSolution<List<Bin>> {
                 chromosome.add(newBin);
             }
         }
-    }
-
-    public int numberOfSticks() {
-        return chromosome.stream().mapToInt(b -> b.size()).sum();
     }
 }

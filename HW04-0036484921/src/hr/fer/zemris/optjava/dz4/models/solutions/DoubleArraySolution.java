@@ -1,6 +1,5 @@
 package hr.fer.zemris.optjava.dz4.models.solutions;
 
-import java.util.Arrays;
 import java.util.Random;
 import java.util.StringJoiner;
 
@@ -12,17 +11,18 @@ public class DoubleArraySolution extends AbstractSolution<double[]> {
     protected double[] max;
 
     public DoubleArraySolution(int size, double[] min, double[] max) {
-        super(new double[size]);
+        this(new double[size], min, max);
+    }
+
+    private DoubleArraySolution(double[] chromosome, double[] min, double[] max) {
+        super(chromosome);
 
         this.min = min;
         this.max = max;
     }
 
-    public DoubleArraySolution(double[] chromosome, double[] min, double[] max) {
-        super(chromosome);
-
-        this.min = min;
-        this.max = max;
+    public DoubleArraySolution newLikeThis() {
+        return new DoubleArraySolution(chromosome.length, min, max);
     }
 
     public void randomize(Random random) {

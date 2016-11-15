@@ -9,9 +9,8 @@ import hr.fer.zemris.optjava.dz4.models.mutations.IMutationOperator;
 import hr.fer.zemris.optjava.dz4.models.selections.ISelection;
 import hr.fer.zemris.optjava.dz4.models.solutions.AbstractSolution;
 
-import java.util.Iterator;
 import java.util.Random;
-import java.util.function.Supplier;
+import java.util.function.Function;
 
 /**
  * Created by Dominik on 7.11.2016..
@@ -23,18 +22,17 @@ public class SteadyStateGA<T extends AbstractSolution> implements IAlgorithm<T> 
     private ICrossoverOperator<T> crossoverOperator;
     private IMutationOperator<T> mutationOperator;
     private int populationSize;
-    private Supplier<T> solutionSupplier;
+    private Function<Random, T> solutionSupplier;
     private int maxGenerations;
     private ISelection<T> selection;
-    private double elitistRate;
     private IFunction function;
     private boolean minimize;
     private boolean switchParent;
 
     public SteadyStateGA(
             IDecoder<T> decoder, ICrossoverOperator<T> crossoverOperator, IMutationOperator<T> mutationOperator,
-            int populationSize, Supplier<T> solutionSupplier, int maxGenerations,
-            ISelection<T> selection, double elitistRate, IFunction function, boolean minimize, boolean switchParent) {
+            int populationSize, Function<Random, T> solutionSupplier, int maxGenerations,
+            ISelection<T> selection, IFunction function, boolean minimize, boolean switchParent) {
         this.decoder = decoder;
         this.crossoverOperator = crossoverOperator;
         this.mutationOperator = mutationOperator;
@@ -42,7 +40,6 @@ public class SteadyStateGA<T extends AbstractSolution> implements IAlgorithm<T> 
         this.solutionSupplier = solutionSupplier;
         this.maxGenerations = maxGenerations;
         this.selection = selection;
-        this.elitistRate = elitistRate;
         this.function = function;
         this.minimize = minimize;
         this.switchParent = switchParent;
@@ -51,7 +48,7 @@ public class SteadyStateGA<T extends AbstractSolution> implements IAlgorithm<T> 
     @Override
     public T run() {
         Population<T> population = new Population<>(populationSize);
-        population.fill(solutionSupplier);
+        population.fill(RANDOM, solutionSupplier);
 
         evaluate(population);
 
@@ -112,10 +109,7 @@ public class SteadyStateGA<T extends AbstractSolution> implements IAlgorithm<T> 
     }
 
     private void evaluate(Population<T> population) {
-        Iterator<T> iterator = population.iterator();
-        while (iterator.hasNext()) {
-            T solution = iterator.next();
-
+        for (T solution : population) {
             solution.fitness = calculateFitness(solution);
         }
 

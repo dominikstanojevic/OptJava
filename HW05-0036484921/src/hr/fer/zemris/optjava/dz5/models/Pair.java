@@ -1,4 +1,4 @@
-package hr.fer.zemris.optjava.dz4.models;
+package hr.fer.zemris.optjava.dz5.models;
 
 /**
  * Created by Dominik on 25.10.2016..

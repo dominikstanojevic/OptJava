@@ -11,10 +11,8 @@ import java.util.function.Supplier;
  */
 public class DoubleArrayBLXCrossoverOperator implements ICrossoverOperator<DoubleArraySolution> {
     private double alpha;
-    private Supplier<DoubleArraySolution> supplier;
 
-    public DoubleArrayBLXCrossoverOperator(Supplier<DoubleArraySolution> supplier, double alpha) {
-        this.supplier = supplier;
+    public DoubleArrayBLXCrossoverOperator(double alpha) {
         this.alpha = alpha;
     }
 
@@ -24,8 +22,8 @@ public class DoubleArrayBLXCrossoverOperator implements ICrossoverOperator<Doubl
         double[] firstParent = parents.first.chromosome;
         double[] secondParent = parents.second.chromosome;
 
-        DoubleArraySolution firstChild = supplier.get();
-        DoubleArraySolution secondChild = supplier.get();
+        DoubleArraySolution firstChild = parents.first.newLikeThis();
+        DoubleArraySolution secondChild = parents.second.newLikeThis();
 
         int size = firstChild.chromosome.length;
 

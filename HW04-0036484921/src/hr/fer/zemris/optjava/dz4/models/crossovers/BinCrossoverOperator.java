@@ -1,11 +1,12 @@
-package hr.fer.zemris.optjava.dz4.part2.models;
+package hr.fer.zemris.optjava.dz4.models.crossovers;
 
 import hr.fer.zemris.optjava.dz4.models.Pair;
 import hr.fer.zemris.optjava.dz4.models.crossovers.ICrossoverOperator;
+import hr.fer.zemris.optjava.dz4.models.solutions.BinContainer;
+import hr.fer.zemris.optjava.dz4.part2.models.Bin;
+import hr.fer.zemris.optjava.dz4.part2.models.Stick;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
@@ -40,9 +41,6 @@ public class BinCrossoverOperator implements ICrossoverOperator<BinContainer> {
 
         firstClone.addStick(firstAfter);
         secondClone.addStick(secondAfter);
-
-        int n1 = firstClone.numberOfSticks();
-        int n2 = secondClone.numberOfSticks();
 
         return new Pair<>(firstClone, secondClone);
     }
@@ -90,7 +88,6 @@ public class BinCrossoverOperator implements ICrossoverOperator<BinContainer> {
     }
 
     private List<Bin> copySubList(List<Bin> subList) {
-        List<Bin> copy = subList.stream().map(Bin::duplicate).collect(Collectors.toList());
-        return copy;
+        return subList.stream().map(Bin::duplicate).collect(Collectors.toList());
     }
 }

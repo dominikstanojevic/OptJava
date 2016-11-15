@@ -2,7 +2,6 @@ package hr.fer.zemris.optjava.dz4.models.selections;
 
 import hr.fer.zemris.optjava.dz4.models.Population;
 import hr.fer.zemris.optjava.dz4.models.solutions.AbstractSolution;
-import hr.fer.zemris.optjava.dz4.models.solutions.DoubleArraySolution;
 
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -29,9 +28,7 @@ public class RouletteWheelSelection<T extends AbstractSolution> implements ISele
     private T select(Population<T> population, Random random, Function<T, Double> fitness) {
         Map<T, Double> relative = new LinkedHashMap<>();
         double total = 0;
-        Iterator<T> iterator = population.iterator();
-        while (iterator.hasNext()) {
-            T s = iterator.next();
+        for (T s : population) {
             double r = fitness.apply(s);
 
             total += r;

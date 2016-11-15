@@ -2,19 +2,17 @@ package hr.fer.zemris.optjava.dz4.part2.models;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 import java.util.StringJoiner;
-import java.util.stream.Stream;
 
 /**
  * Created by Dominik on 4.11.2016..
  */
 public class Bin implements Iterable<Stick> {
-    public static int maxHeight;
+    public static int maxHeight = 20;
     private int currentHeight;
     private List<Stick> sticks = new ArrayList<>();
 

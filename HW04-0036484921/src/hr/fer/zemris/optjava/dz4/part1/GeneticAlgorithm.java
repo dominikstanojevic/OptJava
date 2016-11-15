@@ -12,17 +12,18 @@ import hr.fer.zemris.optjava.dz4.models.solutions.AbstractSolution;
 import hr.fer.zemris.optjava.dz4.models.solutions.DoubleArraySolution;
 import hr.fer.zemris.optjava.dz4.models.algorithms.GenerationalElitistGA;
 import hr.fer.zemris.optjava.dz4.models.selections.ISelection;
-import hr.fer.zemris.optjava.dz4.models.selections.RouletteWheelSelection;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Supplier;
+import java.util.Random;
+import java.util.function.Function;
 
 /**
- * Created by Dominik on 26.10.2016..
+ * Entry point for the first part of the homework. Expects one command line
+ * argument - path to the file. All other parameters can be set here.
  */
 public class GeneticAlgorithm {
     public static final int NUMBER_OF_VARIABLES = 6;
@@ -62,19 +63,24 @@ public class GeneticAlgorithm {
             return Math.sqrt(total / 20);
         };
         IDecoder<DoubleArraySolution> decoder = new PassThroughDecoder();
-        Supplier<DoubleArraySolution> supplier = () -> new DoubleArraySolution(NUMBER_OF_VARIABLES, MIN, MAX);
+        Function<Random, DoubleArraySolution> supplier = random -> {
+            DoubleArraySolution solution = new DoubleArraySolution(NUMBER_OF_VARIABLES, MIN, MAX);
+            solution.randomize(random);
+            return solution;
+        };
 
-        ICrossoverOperator<DoubleArraySolution> crossoverOperator =
-                new DoubleArrayBLXCrossoverOperator(supplier, ALPHA);
+        ICrossoverOperator<DoubleArraySolution> crossoverOperator = new DoubleArrayBLXCrossoverOperator(ALPHA);
         IMutationOperator<DoubleArraySolution> mutationOperator = new DoubleArraySolutionNormalMutationOperator(SIGMA);
         ISelection<DoubleArraySolution> selection = new TournamentSelection<>(TOURNAMENT_SIZE);
 
-        GenerationalElitistGA ga =
-                new GenerationalElitistGA(decoder, crossoverOperator, mutationOperator, POPULATION_SIZE, supplier,
+        GenerationalElitistGA<DoubleArraySolution> ga =
+                new GenerationalElitistGA<>(decoder, crossoverOperator, mutationOperator, POPULATION_SIZE, supplier,
                         MIN_ERROR, MAX_ITERATIONS, selection, ELITIST_RATE, function, true);
         AbstractSolution solution = ga.run();
 
+        System.out.println("----------------------------------------------------");
         System.out.println(solution);
+        System.out.println("Error: " + Math.abs(solution.fitness));
     }
 
     private static double[][] loadData(String path, int rows, int columns) throws IOException {

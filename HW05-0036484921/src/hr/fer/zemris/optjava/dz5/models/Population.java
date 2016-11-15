@@ -1,6 +1,6 @@
-package hr.fer.zemris.optjava.dz4.models;
+package hr.fer.zemris.optjava.dz5.models;
 
-import hr.fer.zemris.optjava.dz4.models.solutions.AbstractSolution;
+import hr.fer.zemris.optjava.dz5.models.solutions.AbstractSolution;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -8,18 +8,20 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 import java.util.function.Function;
-import java.util.function.Supplier;
 
 /**
  * Created by Dominik on 25.10.2016..
  */
 public class Population<T extends AbstractSolution> implements Iterable<T> {
-    private int capacity;
-    private List<T> population;
+    protected int capacity;
+    protected List<T> population = new ArrayList<>();
+
+    public Population() {
+        this(Integer.MAX_VALUE);
+    }
 
     public Population(int capacity) {
         this.capacity = capacity;
-        this.population = new ArrayList<>(capacity);
     }
 
     public void fill(Random random, Function<Random, T> solutionSupplier) {
@@ -70,5 +72,21 @@ public class Population<T extends AbstractSolution> implements Iterable<T> {
 
     public T get(int index) {
         return population.get(index);
+    }
+
+    public T remove(int index) {
+        return population.remove(index);
+    }
+
+    public Population<T> getSubPopulation(int fromIndex, int toIndex) {
+        int capacity = toIndex - fromIndex;
+        Population<T> sub = new Population<>(capacity);
+
+        sub.population = new ArrayList<>(population.subList(fromIndex, toIndex));
+        return sub;
+    }
+
+    public void addPopulation(Population<T> population) {
+        this.population.addAll(population.population);
     }
 }
