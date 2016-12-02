@@ -10,7 +10,7 @@ import java.io.IOException;
 public class TSP {
     public static final double BETA = 2;
     public static final double ALPHA = 1;
-    public static final double RO = 0.98;
+    public static final double RO = 0.02;
 
 
     public static void main(String[] args) throws IOException {

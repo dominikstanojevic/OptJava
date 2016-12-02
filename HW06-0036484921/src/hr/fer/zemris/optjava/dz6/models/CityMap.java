@@ -88,7 +88,7 @@ public class CityMap {
         double[][] information = new double[size][size];
 
         for (int i = 0; i < information.length; i++) {
-            String[] split = data.get(i).split(" ");
+            String[] split = data.get(i).trim().split(" +");
             for (int j = i + 1; j < information.length; j++) {
                 distances[i][j] = distances[j][i] = Double.parseDouble(split[j]);
                 information[i][j] = information[j][i] = 1 / distances[i][j];
@@ -125,7 +125,7 @@ public class CityMap {
         double[][] coordinates = new double[size][2];
 
         for (int i = 0; i < size; i++) {
-            String[] split = data.get(i).split(" ");
+            String[] split = data.get(i).split(" +");
 
             coordinates[i][0] = Double.parseDouble(split[1]);
             coordinates[i][1] = Double.parseDouble(split[2]);

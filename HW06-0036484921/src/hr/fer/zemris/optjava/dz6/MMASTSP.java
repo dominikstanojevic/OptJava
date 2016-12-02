@@ -42,37 +42,30 @@ public class MMASTSP {
         visitGreedy(solution);
         printCurrentBest(solution, 0);
 
-        tauMax = calculateDeltaTau(solution.length);
-        tauMin = tauMax / (2 * map.numberOfCities);
+        tauMax = calculateTauMax(solution.length);
+        tauMin = calculateTauMin(tauMax);
         for (double[] trailsRow : trails) {
             Arrays.fill(trailsRow, tauMax);
         }
 
         Ant[] colony = createColony();
 
-        int stagnation = 0;
         for (int i = 1; i <= maxIterations; i++) {
             for (Ant ant : colony) {
                 tour(ant, trails);
             }
 
             Ant best = Arrays.stream(colony).sorted((a1, a2) -> Double.compare(a1.length, a2.length)).findFirst().get();
-            updateTrails(trails, tauMax, tauMin, best);
 
             if (best.length < solution.length) {
                 solution.length = best.length;
                 solution.visitedCities = best.visitedCities;
-                stagnation = 0;
-            } else {
-                stagnation++;
+
+                tauMax = calculateTauMax(solution.length);
+                tauMin = calculateTauMin(tauMax);
             }
 
-            if (stagnation == 100) {
-                stagnation = 0;
-                for (double[] trailsRow : trails) {
-                    Arrays.fill(trailsRow, tauMax);
-                }
-            }
+            updateTrails(trails, tauMax, tauMin, best);
 
             printCurrentBest(solution, i);
         }
@@ -89,7 +82,7 @@ public class MMASTSP {
     private void updateTrails(double[][] trails, double tauMax, double tauMin, Ant ant) {
         for (int i = 0; i < map.numberOfCities; i++) {
             for (int j = i + 1; j < map.numberOfCities; j++) {
-                double next = ro * trails[i][j];
+                double next = (1 - ro) * trails[i][j];
                 trails[i][j] = trails[j][i] = next < tauMin ? tauMin : next;
             }
         }
@@ -201,12 +194,13 @@ public class MMASTSP {
         for (int i = 0; i < map.numberOfCities - 1; i++) {
             distance += map.distances[ant.visitedCities[i]][ant.visitedCities[i + 1]];
         }
+        distance += map.distances[ant.visitedCities[map.numberOfCities - 1]][ant.visitedCities[0]];
 
         return distance;
     }
 
-    private double calculateDeltaTau(double distance) {
-        return 1 / ((1 - ro) * distance);
+    private double calculateTauMax(double distance) {
+        return 1 / (ro * distance);
     }
 
     private Ant[] createColony() {
@@ -216,5 +210,9 @@ public class MMASTSP {
         }
 
         return ants;
+    }
+
+    private double calculateTauMin(double tauMax) {
+        return tauMax / (2 * map.numberOfCities);
     }
 }
