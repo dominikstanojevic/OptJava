@@ -3,10 +3,17 @@ package hr.fer.zemris.optjava.dz6;
 import hr.fer.zemris.optjava.dz6.models.Ant;
 import hr.fer.zemris.optjava.dz6.models.CityMap;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
 
 /**
  * Created by Dominik on 1.12.2016..
@@ -40,7 +47,6 @@ public class MMASTSP {
         solution.visitedCities = new int[map.numberOfCities];
 
         visitGreedy(solution);
-        printCurrentBest(solution, 0);
 
         tauMax = calculateTauMax(solution.length);
         tauMin = calculateTauMin(tauMax);
@@ -51,11 +57,9 @@ public class MMASTSP {
         Ant[] colony = createColony();
 
         for (int i = 1; i <= maxIterations; i++) {
-            for (Ant ant : colony) {
-                tour(ant, trails);
-            }
+            antsTour(colony, trails);
 
-            Ant best = Arrays.stream(colony).sorted((a1, a2) -> Double.compare(a1.length, a2.length)).findFirst().get();
+            Ant best = Arrays.stream(colony).sorted(Comparator.comparingDouble(a -> a.length)).findFirst().get();
 
             if (best.length < solution.length) {
                 solution.length = best.length;
@@ -65,12 +69,37 @@ public class MMASTSP {
                 tauMin = calculateTauMin(tauMax);
             }
 
-            updateTrails(trails, tauMax, tauMin, best);
+            evaporateTrails(trails, tauMin);
+            updateTrails(trails, tauMax, best);
 
             printCurrentBest(solution, i);
         }
 
         return solution;
+    }
+
+    private void antsTour(Ant[] colony, double[][] trails) {
+        List<Callable<Void>> callableList = createCallable(colony, trails);
+        try {
+            List<Future<Void>> results = TSP.POOL.invokeAll(callableList);
+
+            for (Future<Void> future : results) {
+                future.get();
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void evaporateTrails(double[][] trails, double tauMin) {
+        for (int i = 0; i < map.numberOfCities; i++) {
+            for (int j = i + 1; j < map.numberOfCities; j++) {
+                double next = ro * trails[i][j];
+                trails[i][j] = trails[j][i] = next < tauMin ? tauMin : next;
+            }
+        }
     }
 
     private void printCurrentBest(Ant solution, int iteration) {
@@ -79,14 +108,7 @@ public class MMASTSP {
         System.out.println("--------------------------------------------------");
     }
 
-    private void updateTrails(double[][] trails, double tauMax, double tauMin, Ant ant) {
-        for (int i = 0; i < map.numberOfCities; i++) {
-            for (int j = i + 1; j < map.numberOfCities; j++) {
-                double next = (1 - ro) * trails[i][j];
-                trails[i][j] = trails[j][i] = next < tauMin ? tauMin : next;
-            }
-        }
-
+    private void updateTrails(double[][] trails, double tauMax, Ant ant) {
         double delta = 1 / ant.length;
 
         for (int i = 0; i < map.numberOfCities - 1; i++) {
@@ -96,6 +118,12 @@ public class MMASTSP {
             double result = trails[current][next] + delta;
             trails[current][next] = trails[next][current] = result > tauMax ? tauMax : result;
         }
+
+        int current = ant.visitedCities[map.numberOfCities - 1];
+        int next = ant.visitedCities[0];
+
+        double result = trails[current][next] + delta;
+        trails[current][next] = trails[next][current] = result > tauMax ? tauMax : result;
     }
 
     private void tour(Ant ant, double[][] trails) {
@@ -114,7 +142,7 @@ public class MMASTSP {
             visited[nextCity] = true;
         }
 
-        ant.length = calculateDistance(ant);
+        ant.length = calculateDistance(ant.visitedCities);
     }
 
     private int chooseNextCity(int currentCity, boolean[] visited, double[][] trails) {
@@ -135,6 +163,8 @@ public class MMASTSP {
         }
 
         if (probabilities.isEmpty()) {
+            List<Integer> unvisited = new ArrayList<>();
+
             for (int i = map.neighborhoodSize; i < map.numberOfCities - 1; i++) {
                 int neighbor = map.closest[currentCity][i];
 
@@ -142,13 +172,10 @@ public class MMASTSP {
                     continue;
                 }
 
-                double probability = Math.pow(trails[currentCity][neighbor], alpha) *
-                                     Math.pow(map.heuristicInformation[currentCity][neighbor], beta);
-                probabilities.put(neighbor, probability);
+                unvisited.add(neighbor);
             }
 
-            return probabilities.entrySet().stream().sorted((e1, e2) -> -Double.compare(e1.getValue(), e2.getValue()))
-                    .findFirst().get().getKey();
+            return unvisited.get(RANDOM.nextInt(unvisited.size()));
         }
 
         for (Map.Entry<Integer, Double> entry : probabilities.entrySet()) {
@@ -185,22 +212,22 @@ public class MMASTSP {
             visited[next] = true;
         }
 
-        ant.length = calculateDistance(ant);
+        ant.length = calculateDistance(ant.visitedCities);
     }
 
-    private double calculateDistance(Ant ant) {
+    private double calculateDistance(int[] cities) {
         double distance = 0;
 
         for (int i = 0; i < map.numberOfCities - 1; i++) {
-            distance += map.distances[ant.visitedCities[i]][ant.visitedCities[i + 1]];
+            distance += map.distances[cities[i]][cities[i + 1]];
         }
-        distance += map.distances[ant.visitedCities[map.numberOfCities - 1]][ant.visitedCities[0]];
+        distance += map.distances[cities[map.numberOfCities - 1]][cities[0]];
 
         return distance;
     }
 
     private double calculateTauMax(double distance) {
-        return 1 / (ro * distance);
+        return 1 / ((1 - ro) * distance);
     }
 
     private Ant[] createColony() {
@@ -214,5 +241,18 @@ public class MMASTSP {
 
     private double calculateTauMin(double tauMax) {
         return tauMax / (2 * map.numberOfCities);
+    }
+
+    private List<Callable<Void>> createCallable(Ant[] ants, double[][] trails) {
+        List<Callable<Void>> callableList = new ArrayList<>();
+
+        for (Ant ant : ants) {
+            callableList.add(() -> {
+                tour(ant, trails);
+                return null;
+            });
+        }
+
+        return callableList;
     }
 }

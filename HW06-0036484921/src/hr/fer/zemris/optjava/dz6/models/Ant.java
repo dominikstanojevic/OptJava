@@ -15,13 +15,7 @@ public class Ant {
         String distance = "Total distance: " + length + "\nVisited cities: ";
         StringJoiner sj = new StringJoiner("->");
 
-        boolean[] visited = new boolean[visitedCities.length];
         for (int city : visitedCities) {
-            if(visited[city]) {
-                throw new RuntimeException("E jebiga");
-            }
-            visited[city] = true;
-
             sj.add(Integer.toString(city + 1));
         }
 
