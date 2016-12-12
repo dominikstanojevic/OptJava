@@ -1,4 +1,4 @@
-package hr.fer.zemris.optjava.dz7.neural;
+package hr.fer.zemris.optjava.dz7.models.neural;
 
 /**
  * Created by Dominik on 4.12.2016..

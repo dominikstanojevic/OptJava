@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5735f8bc-8679-434c-b01f-48fe7dc5ee32" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/Dataset.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/Test.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/Utils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/neural/ActivationFunction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/neural/FFANN.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/neural/Layer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/neural/NeuralNetworkException.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HW06-0036484921/src/hr/fer/zemris/optjava/dz6/models/City.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="5735f8bc-8679-434c-b01f-48fe7dc5ee32" name="Default" comment="Seventh homework solved.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW07-0036484921/datoteke/07-iris-formatirano.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/ANNTrainer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/algorithms/CLONALG.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/algorithms/PSO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/models/Antibody.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/models/Particle.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/models/neural/Weights.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/Test.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HW06-0036484921/src/hr/fer/zemris/optjava/dz6/MMASTSP.java" afterPath="$PROJECT_DIR$/HW06-0036484921/src/hr/fer/zemris/optjava/dz6/MMASTSP.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HW06-0036484921/src/hr/fer/zemris/optjava/dz6/TSP.java" afterPath="$PROJECT_DIR$/HW06-0036484921/src/hr/fer/zemris/optjava/dz6/TSP.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HW06-0036484921/src/hr/fer/zemris/optjava/dz6/models/Ant.java" afterPath="$PROJECT_DIR$/HW06-0036484921/src/hr/fer/zemris/optjava/dz6/models/Ant.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/Utils.java" afterPath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/Utils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/neural/ActivationFunction.java" afterPath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/models/neural/ActivationFunction.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/neural/FFANN.java" afterPath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/models/neural/FFANN.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/neural/Layer.java" afterPath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/models/neural/Layer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/neural/NeuralNetworkException.java" afterPath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/models/neural/NeuralNetworkException.java" />
     </list>
     <ignored path="workspace.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,21 +52,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NeuralNetworkException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/neural/NeuralNetworkException.java">
+      <file leaf-file-name="ANNTrainer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/ANNTrainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="42" lean-forward="false" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+            <state relative-caret-position="255">
+              <caret line="27" column="48" lean-forward="true" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,13 +64,52 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/Utils.java">
+      <file leaf-file-name="PSO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/algorithms/PSO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="699">
-              <caret line="94" column="54" lean-forward="false" selection-start-line="94" selection-start-column="54" selection-end-line="94" selection-end-column="54" />
+            <state relative-caret-position="141">
+              <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Particle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/models/Particle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="79" column="41" lean-forward="false" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
+              <folding>
+                <element signature="e#1363#1364#0" expanded="true" />
+                <element signature="e#1411#1412#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CLONALG.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/algorithms/CLONALG.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="38" column="41" lean-forward="false" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Antibody.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/models/Antibody.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="35" column="36" lean-forward="false" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#943#944#0" expanded="true" />
+                <element signature="e#996#997#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -100,6 +129,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>0.</find>
+      <find>system</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -113,17 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/HW05-0036484921/src/hr/fer/zemris/optjava/dz5/part1/FirstProblemDecoder.java" />
-        <option value="$PROJECT_DIR$/HW05-0036484921/src/hr/fer/zemris/optjava/dz5/models/selections/TournamentSelection.java" />
-        <option value="$PROJECT_DIR$/HW05-0036484921/src/hr/fer/zemris/optjava/dz5/models/crossovers/ICrossoverOperator.java" />
-        <option value="$PROJECT_DIR$/HW05-0036484921/src/hr/fer/zemris/optjava/dz5/models/crossovers/XORCrossover.java" />
-        <option value="$PROJECT_DIR$/HW05-0036484921/src/hr/fer/zemris/optjava/dz5/models/solutions/AbstractSolution.java" />
-        <option value="$PROJECT_DIR$/HW05-0036484921/src/hr/fer/zemris/optjava/dz5/models/solutions/BitVectorSolution.java" />
-        <option value="$PROJECT_DIR$/HW05-0036484921/src/hr/fer/zemris/optjava/dz5/models/crossovers/NPointCrossover.java" />
-        <option value="$PROJECT_DIR$/HW05-0036484921/src/hr/fer/zemris/optjava/dz5/models/crossovers/ANDCrossover.java" />
-        <option value="$PROJECT_DIR$/HW05-0036484921/src/hr/fer/zemris/optjava/dz5/models/crossovers/ORCrossover.java" />
-        <option value="$PROJECT_DIR$/HW05-0036484921/src/hr/fer/zemris/optjava/dz5/models/crossovers/LogicCrossover.java" />
-        <option value="$PROJECT_DIR$/HW05-0036484921/src/hr/fer/zemris/optjava/dz5/models/mutations/FlipMutation.java" />
         <option value="$PROJECT_DIR$/HW05-0036484921/src/hr/fer/zemris/optjava/dz5/models/mutations/RandomMutation.java" />
         <option value="$PROJECT_DIR$/HW05-0036484921/datoteke/README.txt" />
         <option value="$PROJECT_DIR$/HW05-0036484921/src/hr/fer/zemris/optjava/dz5/part1/RAPGAPopulation.java" />
@@ -160,10 +179,21 @@
         <option value="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/Dataset.java" />
         <option value="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/FFANN.java" />
         <option value="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/neural/ActivationFunction.java" />
-        <option value="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/neural/Layer.java" />
         <option value="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/neural/NeuralNetworkException.java" />
-        <option value="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/Utils.java" />
+        <option value="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/neural/Layer.java" />
+        <option value="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/neural/FFANN.java" />
+        <option value="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/Test.java" />
+        <option value="$PROJECT_DIR$/HW07-0036484921/src/Particle.java" />
+        <option value="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/models/Neighborhood.java" />
+        <option value="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/models/neural/FFANN.java" />
         <option value="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/Test.java" />
+        <option value="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/models/neural/Weights.java" />
+        <option value="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/Utils.java" />
+        <option value="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/algorithms/CLONALG.java" />
+        <option value="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/algorithms/PSO.java" />
+        <option value="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/models/Particle.java" />
+        <option value="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/ANNTrainer.java" />
+        <option value="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/models/Antibody.java" />
       </list>
     </option>
   </component>
@@ -310,6 +340,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -350,6 +382,50 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dz7" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OptJava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HW07-0036484921" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dz7" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OptJava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HW07-0036484921" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="datoteke" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -357,8 +433,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -368,8 +442,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="last.edited.regexp" value="(1,2,3)" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -393,27 +466,7 @@
       <recent name="D:\fer\5. semestar\ROPAERUJ\workspace\HW01-0036484921" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TSP">
-    <configuration default="false" name="BoxFilling" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="hr.fer.zemris.optjava.dz4.part2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="hr.fer.zemris.optjava.dz4.part2.BoxFilling" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="&quot;D:\fer\5. semestar\ROPAERUJ\workspace\HW04-0036484921\datoteke\kutije\problem-20-50-3.dat&quot;" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="HW04-0036484921" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.ANNTrainer">
     <configuration default="false" name="GeneticAlgorithm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -491,6 +544,26 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="HW06-0036484921" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ANNTrainer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="hr.fer.zemris.optjava.dz7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="hr.fer.zemris.optjava.dz7.ANNTrainer" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;D:\fer\5. semestar\ROPAERUJ\workspace\HW07-0036484921\datoteke\07-iris-formatirano.data&quot; pso-b-20 100 0.001 5000" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="HW07-0036484921" />
       <envs />
       <method />
     </configuration>
@@ -876,19 +949,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.BoxFilling" />
-      <item index="1" class="java.lang.String" itemvalue="Application.GeneticAlgorithm" />
-      <item index="2" class="java.lang.String" itemvalue="Application.GeneticAlgorithm1" />
-      <item index="3" class="java.lang.String" itemvalue="Application.City" />
-      <item index="4" class="java.lang.String" itemvalue="Application.TSP" />
+      <item index="0" class="java.lang.String" itemvalue="Application.GeneticAlgorithm" />
+      <item index="1" class="java.lang.String" itemvalue="Application.GeneticAlgorithm1" />
+      <item index="2" class="java.lang.String" itemvalue="Application.City" />
+      <item index="3" class="java.lang.String" itemvalue="Application.TSP" />
+      <item index="4" class="java.lang.String" itemvalue="Application.ANNTrainer" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.TSP" />
-        <item index="1" class="java.lang.String" itemvalue="Application.City" />
-        <item index="2" class="java.lang.String" itemvalue="Application.GeneticAlgorithm1" />
-        <item index="3" class="java.lang.String" itemvalue="Application.GeneticAlgorithm" />
-        <item index="4" class="java.lang.String" itemvalue="Application.BoxFilling" />
+        <item index="0" class="java.lang.String" itemvalue="Application.ANNTrainer" />
+        <item index="1" class="java.lang.String" itemvalue="Application.TSP" />
+        <item index="2" class="java.lang.String" itemvalue="Application.City" />
+        <item index="3" class="java.lang.String" itemvalue="Application.GeneticAlgorithm1" />
+        <item index="4" class="java.lang.String" itemvalue="Application.GeneticAlgorithm" />
       </list>
     </recent_temporary>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -990,7 +1063,18 @@
       <workItem from="1480883724106" duration="8384000" />
       <workItem from="1481029970426" duration="430000" />
       <workItem from="1481123303465" duration="4820000" />
-      <workItem from="1481128608293" duration="4569000" />
+      <workItem from="1481128608293" duration="4598000" />
+      <workItem from="1481143676681" duration="3683000" />
+      <workItem from="1481189564648" duration="2511000" />
+      <workItem from="1481196510542" duration="6507000" />
+      <workItem from="1481210090283" duration="2088000" />
+      <workItem from="1481223006257" duration="1389000" />
+      <workItem from="1481231980505" duration="2923000" />
+      <workItem from="1481272372946" duration="4532000" />
+      <workItem from="1481290448148" duration="263000" />
+      <workItem from="1481318812307" duration="1175000" />
+      <workItem from="1481532197179" duration="17014000" />
+      <workItem from="1481569056780" duration="2379000" />
     </task>
     <task id="LOCAL-00001" summary="First homework finished.">
       <created>1475850436435</created>
@@ -1111,11 +1195,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480628929720</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Seventh homework started.">
+      <created>1481133408834</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1481133408834</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="349778000" />
+    <option name="totallyTimeSpent" value="394271000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1128,37 +1219,41 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34127843" sideWeight="0.5127932" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.48933902" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34127843" sideWeight="0.48720682" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30863538" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Memory View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48212352" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33044422" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2751896" sideWeight="0.48720682" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.48933902" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29264393" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47778982" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33044422" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="93" y="100" width="774" height="847" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16044776" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1174,28 +1269,32 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Memory View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47778982" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48212352" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33044422" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33044422" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="93" y="100" width="774" height="847" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34127843" sideWeight="0.48720682" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.48933902" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16044776" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29904053" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2751896" sideWeight="0.48720682" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.48933902" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16044776" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29264393" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1229,7 +1328,9 @@
     <MESSAGE value="Fourth homework finished." />
     <MESSAGE value="Fifth homework solved." />
     <MESSAGE value="Majority of the code for the sixth homework written." />
-    <option name="LAST_COMMIT_MESSAGE" value="Majority of the code for the sixth homework written." />
+    <MESSAGE value="Seventh homework started." />
+    <MESSAGE value="Seventh homework solved." />
+    <option name="LAST_COMMIT_MESSAGE" value="Seventh homework solved." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1254,16 +1355,41 @@
           <option name="timeStamp" value="281" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/neural/Layer.java</url>
-          <line>103</line>
+          <url>file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/models/neural/Layer.java</url>
+          <line>115</line>
           <properties />
           <option name="timeStamp" value="282" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/ANNTrainer.java</url>
+          <line>91</line>
+          <properties />
+          <option name="timeStamp" value="304" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/models/neural/FFANN.java</url>
+          <line>58</line>
+          <properties />
+          <option name="timeStamp" value="307" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/algorithms/CLONALG.java</url>
+          <line>138</line>
+          <properties />
+          <option name="timeStamp" value="310" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="i == 100" language="JAVA" />
+          <url>file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/algorithms/PSO.java</url>
+          <line>72</line>
+          <properties />
+          <option name="timeStamp" value="317" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="283" />
+      <option name="time" value="319" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1275,6 +1401,7 @@
         <watch expression="newPop" />
         <watch expression="newPop" language="JAVA" />
         <watch expression="trails" />
+        <watch expression="((Array2DRowRealMatrix)((Layer)this).weights).data" custom="org.apache.commons.math3.linear.Array2DRowRealMatrix,hr.fer.zemris.optjava.dz7.neural.Layer" />
       </configuration>
     </watches-manager>
   </component>
@@ -1283,67 +1410,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/HW05-0036484921/data/sasegasa/els19.dat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-594">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW05-0036484921/src/hr/fer/zemris/optjava/dz5/models/crossovers/DoubleArrayBLXCrossoverOperator.java" />
-    <entry file="file://$PROJECT_DIR$/HW05-0036484921/src/hr/fer/zemris/optjava/dz5/part2/PassThroughDecoder.java" />
-    <entry file="file://$PROJECT_DIR$/HW05-0036484921/src/hr/fer/zemris/optjava/dz5/part1/FirstProblemDecoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW05-0036484921/src/hr/fer/zemris/optjava/dz5/models/mutations/DoubleArraySolutionNormalMutationOperator.java" />
-    <entry file="file://$PROJECT_DIR$/HW05-0036484921/src/hr/fer/zemris/optjava/dz5/models/solutions/DoubleArraySolution.java" />
-    <entry file="file://$PROJECT_DIR$/HW05-0036484921/src/hr/fer/zemris/optjava/dz5/part2/IntegerArrayDecoder.java" />
-    <entry file="file://$PROJECT_DIR$/HW05-0036484921/src/hr/fer/zemris/optjava/dz5/part2/QAPDecoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="37" lean-forward="false" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW05-0036484921/src/hr/fer/zemris/optjava/dz5/part1/GeneticAlgorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="98" column="8" lean-forward="false" selection-start-line="98" selection-start-column="8" selection-end-line="98" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW05-0036484921/src/hr/fer/zemris/optjava/dz5/models/crossovers/LogicCrossover.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="45" column="14" lean-forward="false" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/util/concurrent/FutureTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="285" column="0" lean-forward="false" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/util/concurrent/ThreadPoolExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="1154" column="0" lean-forward="false" selection-start-line="1154" selection-start-column="0" selection-end-line="1154" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/util/Random.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="387" column="0" lean-forward="false" selection-start-line="387" selection-start-column="0" selection-end-line="387" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/util/Random.java" />
     <entry file="file://$PROJECT_DIR$/HW05-0036484921/src/hr/fer/zemris/optjava/dz5/models/algorithms/RAPGA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -1351,13 +1418,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4811">
-          <caret line="306" column="12" lean-forward="false" selection-start-line="306" selection-start-column="12" selection-end-line="306" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/util/List.java" />
     <entry file="file://$PROJECT_DIR$/HW05-0036484921/src/hr/fer/zemris/optjava/dz5/models/IFunction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1542,63 +1603,139 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/neural/ActivationFunction.java">
+    <entry file="file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/models/neural/NeuralNetworkException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/neural/FFANN.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="204">
+          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#326#327#0" expanded="false" />
+            <element signature="e#356#357#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/neural/Layer.java">
+    <entry file="file://$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/Prijenosna.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/Test.java" />
+    <entry file="file://$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/Environment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="87" column="5" lean-forward="true" selection-start-line="58" selection-start-column="4" selection-end-line="87" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/models/Neighborhood.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/util/concurrent/Callable.java" />
+    <entry file="jar://$PROJECT_DIR$/../Zadaće/2/commons-math3-3.6.1-bin/commons-math3-3.6.1/commons-math3-3.6.1.jar!/org/apache/commons/math3/linear/AbstractRealMatrix.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="432" column="0" lean-forward="false" selection-start-line="432" selection-start-column="0" selection-end-line="432" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/models/neural/Layer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/algorithms/NumOptAlgorithms.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="130" column="90" lean-forward="false" selection-start-line="130" selection-start-column="36" selection-end-line="130" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/models/neural/ActivationFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/models/neural/FFANN.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/models/neural/Weights.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="e#2879#2880#0" expanded="true" />
-            <element signature="e#2917#2918#0" expanded="true" />
-          </folding>
+          <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="699">
-          <caret line="94" column="54" lean-forward="false" selection-start-line="94" selection-start-column="54" selection-end-line="94" selection-end-column="54" />
+        <state relative-caret-position="136">
+          <caret line="21" column="68" lean-forward="false" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/algorithms/CLONALG.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="41" lean-forward="false" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/neural/NeuralNetworkException.java">
+    <entry file="file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/algorithms/PSO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="141">
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/Test.java">
+    <entry file="file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/models/Particle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="42" lean-forward="false" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+        <state relative-caret-position="493">
+          <caret line="79" column="41" lean-forward="false" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
+          <folding>
+            <element signature="e#1363#1364#0" expanded="true" />
+            <element signature="e#1411#1412#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/ANNTrainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="27" column="48" lean-forward="true" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/models/Antibody.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="35" column="36" lean-forward="false" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#943#944#0" expanded="true" />
+            <element signature="e#996#997#0" expanded="true" />
           </folding>
         </state>
       </provider>

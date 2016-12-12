@@ -1,6 +1,6 @@
 package hr.fer.zemris.optjava.dz7;
 
-import hr.fer.zemris.optjava.dz7.neural.ActivationFunction;
+import hr.fer.zemris.optjava.dz7.models.neural.ActivationFunction;
 import org.apache.commons.math3.exception.DimensionMismatchException;
 import org.apache.commons.math3.linear.ArrayRealVector;
 import org.apache.commons.math3.linear.MatrixUtils;
@@ -13,12 +13,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * Created by Dominik on 4.12.2016..
  */
 public class Utils {
-    public static final Random RANDOM = new Random();
+    public static final Random RANDOM = ThreadLocalRandom.current();
 
     public static RealMatrix createRandomWeights(int rows, int columns, double lowerBound, double upperBound) {
         double[][] matrix = new double[rows + 1][columns];
@@ -41,14 +42,12 @@ public class Utils {
         return new ArrayRealVector(vector);
     }
 
-    public static RealVector mapForResult(RealVector vector, ActivationFunction function) {
-        double[] result = new double[vector.getDimension() + 1];
+    public static RealVector map(RealVector vector, ActivationFunction function) {
+        double[] result = new double[vector.getDimension()];
 
         for (int i = 0, n = vector.getDimension(); i < n; i++) {
             result[i] = function.valueAt(vector.getEntry(i));
         }
-
-        result[vector.getDimension()] = 1;
 
         return new ArrayRealVector(result);
     }
@@ -99,7 +98,7 @@ public class Utils {
         double[] numbers = new double[data.length];
 
         for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = Integer.parseInt(data[i]);
+            numbers[i] = Double.parseDouble(data[i]);
         }
 
         return numbers;

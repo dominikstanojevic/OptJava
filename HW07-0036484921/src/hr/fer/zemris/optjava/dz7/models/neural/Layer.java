@@ -1,4 +1,4 @@
-package hr.fer.zemris.optjava.dz7.neural;
+package hr.fer.zemris.optjava.dz7.models.neural;
 
 import hr.fer.zemris.optjava.dz7.Utils;
 import org.apache.commons.math3.linear.ArrayRealVector;
@@ -48,7 +48,12 @@ public class Layer {
     }
 
     RealVector calculateOutput() {
-        RealVector result = Utils.mapForResult(values, activationFunction);
+        RealVector result;
+        if (previous == null) {
+            result = values;
+        } else {
+            result = Utils.map(values, activationFunction);
+        }
 
         if (next != null) {
             fire(result);
@@ -58,6 +63,13 @@ public class Layer {
 
     private void fire(RealVector result) {
         Objects.requireNonNull(result, "Result vector cannot be null.");
+
+        int dimension = result.getDimension();
+        double[] vector = new double[dimension + 1];
+        System.arraycopy(result.toArray(), 0, vector, 0, dimension);
+        vector[dimension] = 1;
+        result = new ArrayRealVector(vector);
+
         for (int i = 0, n = next.numberOfNeurons(); i < n; i++) {
             RealVector weightsForNeuron = weights.getColumnVector(i);
 

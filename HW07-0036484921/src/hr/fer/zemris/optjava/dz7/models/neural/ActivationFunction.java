@@ -1,4 +1,4 @@
-package hr.fer.zemris.optjava.dz7.neural;
+package hr.fer.zemris.optjava.dz7.models.neural;
 
 import java.util.function.Function;
 

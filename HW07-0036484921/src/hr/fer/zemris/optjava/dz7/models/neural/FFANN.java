@@ -1,4 +1,4 @@
-package hr.fer.zemris.optjava.dz7.neural;
+package hr.fer.zemris.optjava.dz7.models.neural;
 
 import hr.fer.zemris.optjava.dz7.Dataset;
 import org.apache.commons.math3.linear.ArrayRealVector;
@@ -44,6 +44,32 @@ public class FFANN {
         return calculateCost(outputs);
     }
 
+    public double test(double[] weights) {
+        distributeWeights(weights);
+
+        RealMatrix outputs = calculateOutputs();
+
+        double correct = 0;
+        for (int i = 0, n = outputs.getRowDimension(); i < n; i++) {
+            RealVector getOutputRow = outputs.getRowVector(i);
+            RealVector getExpectedRow = dataset.outputs.getRowVector(i);
+
+            boolean good = true;
+            for (int j = 0, m = getExpectedRow.getDimension(); j < m; j++) {
+                if (getExpectedRow.getEntry(j) != Math.round(getOutputRow.getEntry(j))) {
+                    good = false;
+                    break;
+                }
+            }
+
+            if (good) {
+                correct++;
+            }
+        }
+
+        return correct / outputs.getRowDimension();
+    }
+
     private double calculateCost(RealMatrix outputs) {
         double total = 0;
         for (int i = 0; i < dataset.numberOfSamples; i++) {
@@ -51,7 +77,9 @@ public class FFANN {
             RealVector expected = dataset.outputs.getRowVector(i);
 
             RealVector difference = output.subtract(expected);
-            total += difference.getL1Norm();
+            for (int j = 0; j < difference.getDimension(); j++) {
+                total += difference.getEntry(j) * difference.getEntry(j);
+            }
         }
 
         return total / dataset.numberOfSamples;
@@ -85,11 +113,14 @@ public class FFANN {
         for (int i = 0, n = layers.length - 1; i < n; i++) {
             int numberOfWeights = layers[i].numberOfWeights();
 
-            double[] weightsForLayer = Arrays.copyOfRange(weights, startPosition, numberOfWeights);
+            double[] weightsForLayer = Arrays.copyOfRange(weights, startPosition, startPosition + numberOfWeights);
             startPosition += numberOfWeights;
 
             layers[i].setWeightMatrix(weightsForLayer);
         }
     }
 
+    public int getNumberOfWeights() {
+        return numberOfWeights;
+    }
 }
