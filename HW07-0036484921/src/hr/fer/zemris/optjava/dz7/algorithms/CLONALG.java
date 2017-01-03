@@ -143,6 +143,31 @@ public class CLONALG {
         }
     }
 
+    private Map<Antibody, Double> normalize(List<Antibody> repertoire) {
+        double min = Double.POSITIVE_INFINITY;
+        double max = Double.NEGATIVE_INFINITY;
+        int n = repertoire.size();
+
+        for(int i = 0; i < n; i++) {
+            double affinity = repertoire.get(i).affinity;
+            if(affinity < min) {
+                min = affinity;
+            }
+            if (affinity > max) {
+                max = affinity;
+            }
+        }
+
+        double delta = max - min;
+        Map<Antibody, Double> normalized = new HashMap<>();
+
+        for(Antibody antibody : repertoire) {
+            normalized.put(antibody, (antibody.affinity - min) / delta);
+        }
+
+        return normalized;
+    }
+
     private Map<Antibody, Double> normalizeAffinity(List<Antibody> repertoire) {
         double mean = 0;
         int n = repertoire.size();

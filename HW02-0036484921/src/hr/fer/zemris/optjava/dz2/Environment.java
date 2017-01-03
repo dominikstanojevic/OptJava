@@ -48,7 +48,7 @@ public class Environment {
                 break;
             default:
                 throw new IllegalArgumentException("Invalid algorithm string. Possible " +
-                                                   "models are grad and newton. Given: " +
+                                                   "models2 are grad and newton. Given: " +
                                                    algorithm);
         }
 

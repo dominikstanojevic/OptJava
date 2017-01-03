@@ -1,17 +1,17 @@
 package hr.fer.zemris.optjava.dz4.part1;
 
-import hr.fer.zemris.optjava.dz4.models.IFunction;
-import hr.fer.zemris.optjava.dz4.models.crossovers.DoubleArrayBLXCrossoverOperator;
-import hr.fer.zemris.optjava.dz4.models.crossovers.ICrossoverOperator;
-import hr.fer.zemris.optjava.dz4.models.decoders.IDecoder;
-import hr.fer.zemris.optjava.dz4.models.decoders.PassThroughDecoder;
-import hr.fer.zemris.optjava.dz4.models.mutations.DoubleArraySolutionNormalMutationOperator;
-import hr.fer.zemris.optjava.dz4.models.mutations.IMutationOperator;
-import hr.fer.zemris.optjava.dz4.models.selections.TournamentSelection;
-import hr.fer.zemris.optjava.dz4.models.solutions.AbstractSolution;
-import hr.fer.zemris.optjava.dz4.models.solutions.DoubleArraySolution;
-import hr.fer.zemris.optjava.dz4.models.algorithms.GenerationalElitistGA;
-import hr.fer.zemris.optjava.dz4.models.selections.ISelection;
+import hr.fer.zemris.optjava.dz9.models.IFunction;
+import hr.fer.zemris.optjava.dz9.models.crossovers.DoubleArrayBLXCrossoverOperator;
+import hr.fer.zemris.optjava.dz9.models.crossovers.ICrossoverOperator;
+import hr.fer.zemris.optjava.dz9.models.decoders.IDecoder;
+import hr.fer.zemris.optjava.dz9.models.decoders.PassThroughDecoder;
+import hr.fer.zemris.optjava.dz9.models.mutations.DoubleArraySolutionNormalMutationOperator;
+import hr.fer.zemris.optjava.dz9.models.mutations.IMutationOperator;
+import hr.fer.zemris.optjava.dz9.models.selections.TournamentSelection;
+import hr.fer.zemris.optjava.dz9.models.solutions.AbstractSolution;
+import hr.fer.zemris.optjava.dz9.models.solutions.DoubleArraySolution;
+import hr.fer.zemris.optjava.dz9.models.algorithms.GenerationalElitistGA;
+import hr.fer.zemris.optjava.dz9.models.selections.ISelection;
 
 import java.io.IOException;
 import java.nio.file.Files;
