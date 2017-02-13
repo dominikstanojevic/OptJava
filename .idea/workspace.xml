@@ -1,60 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5735f8bc-8679-434c-b01f-48fe7dc5ee32" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW09-0036484921/datoteke/share_decision.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW09-0036484921/datoteke/share_objective.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW08-0036484921/datoteke/08-Laser-generated-data.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/ANNTrainer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/algorithms/DE.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/models/Dataset.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/models/Evaluator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/models/Solution.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/models/neural/AbstractANN.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/models/neural/ActivationFunction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/models/neural/ContextLayer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/models/neural/ElmanNeuralNetwork.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/models/neural/FFANN.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/models/neural/Layer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/models/neural/NeuralNetworkException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/models/neural/Utils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW09-0036484921/datoteke/izlaz-dec.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW09-0036484921/datoteke/izlaz-obj.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/MOOP.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/algorithms/Distance.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/algorithms/IMOOPProblem.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/algorithms/NSGA.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/algorithms/RealValuedMOOPProblem.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/algorithms/GenerationalElitistGA.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/algorithms/IAlgorithm.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/algorithms/SteadyStateGA.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/crossovers/BinCrossoverOperator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/decoders/BinContainerDecoder.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/mutations/BinMutationOperator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/selections/TournamentSelection.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/solutions/BinContainer.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+    <list default="true" id="5735f8bc-8679-434c-b01f-48fe7dc5ee32" name="Default" comment="Parallelization homework solved.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/resources/11-kuca-200-133.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/IFunction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/Pair.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/Population.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/algorithms/Distance.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/algorithms/IMOOPProblem.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/algorithms/NSGA.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/algorithms/RealValuedMOOPProblem.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/crossovers/DoubleArrayBLXCrossoverOperator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/crossovers/ICrossoverOperator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/decoders/IDecoder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/decoders/PassThroughDecoder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/mutations/DoubleArraySolutionNormalMutationOperator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/mutations/IMutationOperator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/selections/ISelection.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/selections/RouletteWheelSelection.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/solutions/AbstractSolution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/solutions/DoubleArraySolution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW10-0036484921/HW10-0036484921.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW10-0036484921/src/hr/fer/zemris/optjava/dz10/MOOP.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW10-0036484921/src/hr/fer/zemris/optjava/dz10/Problems.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW10-0036484921/src/hr/fer/zemris/optjava/dz10/models/IFunction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW10-0036484921/src/hr/fer/zemris/optjava/dz10/models/Pair.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW10-0036484921/src/hr/fer/zemris/optjava/dz10/models/Population.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW10-0036484921/src/hr/fer/zemris/optjava/dz10/models/algorithms/IMOOPProblem.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW10-0036484921/src/hr/fer/zemris/optjava/dz10/models/algorithms/NSGAII.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW10-0036484921/src/hr/fer/zemris/optjava/dz10/models/algorithms/RealValuedMOOPProblem.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW10-0036484921/src/hr/fer/zemris/optjava/dz10/models/crossovers/DoubleArrayBLXCrossoverOperator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW10-0036484921/src/hr/fer/zemris/optjava/dz10/models/crossovers/ICrossoverOperator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW10-0036484921/src/hr/fer/zemris/optjava/dz10/models/decoders/IDecoder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW10-0036484921/src/hr/fer/zemris/optjava/dz10/models/decoders/PassThroughDecoder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW10-0036484921/src/hr/fer/zemris/optjava/dz10/models/mutations/DoubleArraySolutionNormalMutationOperator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW10-0036484921/src/hr/fer/zemris/optjava/dz10/models/mutations/IMutationOperator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW10-0036484921/src/hr/fer/zemris/optjava/dz10/models/selections/ISelection.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW10-0036484921/src/hr/fer/zemris/optjava/dz10/models/selections/TournamentSelection.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW10-0036484921/src/hr/fer/zemris/optjava/dz10/models/solutions/AbstractSolution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW10-0036484921/src/hr/fer/zemris/optjava/dz10/models/solutions/DoubleArraySolution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/HW11-0036484921.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/resources/rng-config.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/Example.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/GrayScaleImage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/ThreadPool.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/algorithms/IAlgorithm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/algorithms/ParallelEvaluationGA.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/algorithms/ParallelGenerationGA.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/crossovers/ICrossoverOperator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/crossovers/IntOnePointCrossover.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/evaluators/Evaluator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/evaluators/IGAEvaluator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/mutations/IMutationOperator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/mutations/IntRandomMutation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/rng/EvoThread.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/rng/IRNG.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/rng/IRNGProvider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/rng/RNG.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/rng/RNGRandomImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/rng/Test1.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/rng/ThreadBoundRNGProvider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/rng/ThreadLocalRNGProvider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/selections/ISelectionOperator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/selections/TournamentSelection.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/solutions/GASolution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/solutions/IntArrayGASolution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/solutions/Pair.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/solutions/Population.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW12-0036484921/HW12-0036484921.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/Ant.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/Evaluator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/GP.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/Grid.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/Pair.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/Test.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/nodes/Action.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/nodes/Function.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/nodes/INode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/operators/OnePointCrossover.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/operators/OnePointMutation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/operators/TournamentSelection.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/Environment.java" afterPath="$PROJECT_DIR$/HW02-0036484921/src/hr/fer/zemris/optjava/dz2/Environment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/part1/GeneticAlgorithm.java" afterPath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/part1/GeneticAlgorithm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/part2/BoxFilling.java" afterPath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/part2/BoxFilling.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/algorithms/CLONALG.java" afterPath="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/algorithms/CLONALG.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/IFunction.java" afterPath="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/IFunction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/Pair.java" afterPath="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/Pair.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/Population.java" afterPath="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/Population.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/crossovers/DoubleArrayBLXCrossoverOperator.java" afterPath="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/crossovers/DoubleArrayBLXCrossoverOperator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/crossovers/ICrossoverOperator.java" afterPath="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/crossovers/ICrossoverOperator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/decoders/IDecoder.java" afterPath="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/decoders/IDecoder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/decoders/PassThroughDecoder.java" afterPath="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/decoders/PassThroughDecoder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/mutations/DoubleArraySolutionNormalMutationOperator.java" afterPath="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/mutations/DoubleArraySolutionNormalMutationOperator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/mutations/IMutationOperator.java" afterPath="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/mutations/IMutationOperator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/selections/ISelection.java" afterPath="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/selections/ISelection.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/selections/RouletteWheelSelection.java" afterPath="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/selections/RouletteWheelSelection.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/solutions/AbstractSolution.java" afterPath="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/solutions/AbstractSolution.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HW04-0036484921/src/hr/fer/zemris/optjava/dz4/models/solutions/DoubleArraySolution.java" afterPath="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/solutions/DoubleArraySolution.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HW09-0036484921/datoteke/izlaz-dec.txt" afterPath="$PROJECT_DIR$/HW09-0036484921/datoteke/izlaz-dec.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HW09-0036484921/datoteke/izlaz-obj.txt" afterPath="$PROJECT_DIR$/HW09-0036484921/datoteke/izlaz-obj.txt" />
     </list>
     <ignored path="workspace.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -98,16 +129,108 @@
     <favorites_list name="workspace" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="OnePointCrossover.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/operators/OnePointCrossover.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="341">
+              <caret line="39" column="80" lean-forward="false" selection-start-line="39" selection-start-column="80" selection-end-line="39" selection-end-column="80" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ant.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/Ant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="121">
+              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <folding>
+                <element signature="e#862#863#0" expanded="true" />
+                <element signature="e#912#913#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OnePointMutation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/operators/OnePointMutation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="91">
+              <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="INode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/nodes/INode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#630#631#0" expanded="true" />
+                <element signature="e#672#673#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="39" column="56" lean-forward="false" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Action.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/nodes/Action.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Function.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/nodes/Function.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TournamentSelection.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/operators/TournamentSelection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="35" column="36" lean-forward="false" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Singleton" />
+        <option value="JavaScript File" />
         <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -128,57 +251,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/HW07-0036484921/src/hr/fer/zemris/optjava/dz7/algorithms/CLONALG.java" />
-        <option value="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/neural/elman/ga/Chromosome.java" />
-        <option value="$PROJECT_DIR$/HW08-0036484921/src/Dataset.java" />
-        <option value="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/Dataset.java" />
-        <option value="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/Solution.java" />
-        <option value="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/Evaluator.java" />
-        <option value="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/neural/AbstractANN.java" />
-        <option value="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/neural/ContextLayer.java" />
-        <option value="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/neural/Layer.java" />
-        <option value="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/neural/ElmanNeuralNetwork.java" />
-        <option value="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/DE.java" />
-        <option value="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/models/Dataset.java" />
-        <option value="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/models/Evaluator.java" />
-        <option value="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/algorithms/DE.java" />
-        <option value="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/models/neural/Utils.java" />
-        <option value="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/models/neural/ContextLayer.java" />
-        <option value="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/models/neural/Layer.java" />
-        <option value="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/models/Solution.java" />
-        <option value="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/models/neural/ElmanNeuralNetwork.java" />
-        <option value="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/models/neural/FFANN.java" />
-        <option value="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/models/neural/AbstractANN.java" />
-        <option value="$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/ANNTrainer.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/IFunction.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/algorithms/IMOOPProblem.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/algorithms/RealValuedMOOPProblem.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/solutions/RealValuedSolution.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/algorithms/NSGA.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/mutations/IMutationOperator.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/Population.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/selections/ISelection.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/mutations/IMutationOperator.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/utilities/Population.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/utilities/IFunction.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/utilities/Pair.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/crossovers/ICrossoverOperator.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/selections/RouletteWheelSelection.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/solutions/Solution.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/mutations/DoubleArraySolutionNormalMutationOperator.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/crossovers/DoubleArrayBLXCrossoverOperator.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/algorithms/RealValuedMOOPProblem.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/algorithms/IMOOPProblem.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/crossovers/DoubleArrayBLXCrossoverOperator.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/algorithms/Distance.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/MOOP.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/test.js" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/selections/RouletteWheelSelection.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/solutions/AbstractSolution.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/solutions/DoubleArraySolution.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/algorithms/NSGA.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/Population.java" />
-        <option value="$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/MOOP.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/resources/rng-config.properties" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/rng/EvoThread.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/GrayScaleImage.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/evaluators/IntArrayEvaluator.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/selections/SelectionOperator.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/selections/ISelectionOperator.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/crossovers.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/crossovers/ICrossoverOperator.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/crossovers/BLXAlphaCrossover.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/solutions/Pair.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/crossovers/Test.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/crossovers/TwoPointCrossover.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/mutations/RandomMutation.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/mutations/IMutationOperator.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/algorithms/IAlgorithm.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/algorithms/FirstAssignmentGA.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/solutions/GASolution.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/solutions/IntArrayGASolution.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/evaluators/IGAEvaluator.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/solutions/Population.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/mutations/IntRandomMutation.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/evaluators/Evaluator.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/ThreadPool.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/crossovers/IntTwoPointCrossover.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/algorithms/ParallelGenerationGA.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/selections/TournamentSelection.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/algorithms/ParallelEvaluationGA.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/FirstAssignment.java" />
+        <option value="$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/Example.java" />
+        <option value="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/INode.java" />
+        <option value="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/Action.java" />
+        <option value="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/nodes/Map.java" />
+        <option value="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/nodes/Grid.java" />
+        <option value="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/nodes/Evaluator.java" />
+        <option value="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/nodes/Ant.java" />
+        <option value="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/Slection.java" />
+        <option value="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/TournamentSelection.java" />
+        <option value="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/Pair.java" />
+        <option value="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/OnePointCrossover.java" />
+        <option value="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/operators/Reproduction.java" />
+        <option value="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/Evaluator.java" />
+        <option value="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/operators/TournamentSelection.java" />
+        <option value="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/nodes/Action.java" />
+        <option value="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/nodes/Function.java" />
+        <option value="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/Grid.java" />
+        <option value="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/GP.java" />
+        <option value="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/operators/OnePointMutation.java" />
+        <option value="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/Ant.java" />
+        <option value="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/Test.java" />
+        <option value="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/operators/OnePointCrossover.java" />
+        <option value="$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/nodes/INode.java" />
       </list>
     </option>
   </component>
@@ -328,6 +451,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -336,7 +460,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="HW09-0036484921" />
+              <option name="myItemId" value="HW12-0036484921" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -346,18 +470,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="HW09-0036484921" />
+              <option name="myItemId" value="HW12-0036484921" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="datoteke" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -368,91 +495,36 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
-    <property name="last.edited.regexp" value="(1,2,3)" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+    <property name="last.edited.regexp" value="x" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="js.eslint.eslintPackage" value="" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\fer\5. semestar\ROPAERUJ\workspace\HW11-0036484921\resources" />
+      <recent name="D:\fer\5. semestar\ROPAERUJ\workspace\HW11-0036484921\src" />
+      <recent name="D:\fer\5. semestar\ROPAERUJ\workspace\HW10-0036484921" />
       <recent name="D:\fer\5. semestar\ROPAERUJ\workspace\HW01-0036484921" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="hr.fer.zemris.optjava.dz11.solutions" />
+      <recent name="hr.fer.zemris.optjava.dz10" />
       <recent name="hr.fer.zemris.optjava.dz9.utilities" />
       <recent name="hr.fer.zemris.optjava.dz9" />
       <recent name="hr.fer.zemris.optjava.dz5.models.mutations" />
-      <recent name="hr.fer.zemris.optjava.dz5.part2" />
-      <recent name="hr.fer.zemris.optjava.dz5.models.solutions" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\fer\5. semestar\ROPAERUJ\workspace\HW04-0036484921\src\hr\fer\zemris\optjava\dz4\part1" />
+      <recent name="D:\fer\5. semestar\ROPAERUJ\workspace\HW10-0036484921\src\hr\fer\zemris\optjava\dz10" />
       <recent name="D:\fer\5. semestar\ROPAERUJ\workspace\HW09-0036484921\src" />
       <recent name="D:\fer\5. semestar\ROPAERUJ\workspace\HW08-0036484921\src\hr\fer\zemris\optjava\dz8" />
       <recent name="D:\fer\5. semestar\ROPAERUJ\workspace\HW08-0036484921\lib" />
-      <recent name="D:\fer\5. semestar\ROPAERUJ\workspace\HW08-0036484921\src\hr\fer\zemris\optjava\dz8\neural" />
-      <recent name="D:\fer\5. semestar\ROPAERUJ\workspace\HW07-0036484921\src\hr\fer\zemris\optjava\dz7" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MOOP">
-    <configuration default="false" name="City" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="hr.fer.zemris.optjava.dz6.models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="hr.fer.zemris.optjava.dz6.models.City" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="HW06-0036484921" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="TSP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="hr.fer.zemris.optjava.dz6.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="hr.fer.zemris.optjava.dz6.TSP" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="&quot;D:\fer\5. semestar\ROPAERUJ\workspace\HW06-0036484921\datoteke\pr2392.tsp&quot; 8 50 2500" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="HW06-0036484921" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Dataset" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="hr.fer.zemris.optjava.dz8.algorithms.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="hr.fer.zemris.optjava.dz8.models.Dataset" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="HW08-0036484921" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.Test">
     <configuration default="false" name="ANNTrainer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -476,20 +548,80 @@
     <configuration default="false" name="MOOP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="hr.fer.zemris.optjava.dz9.*" />
+          <option name="PATTERN" value="hr.fer.zemris.optjava.dz10.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="hr.fer.zemris.optjava.dz9.MOOP" />
+      <option name="MAIN_CLASS_NAME" value="hr.fer.zemris.optjava.dz10.MOOP" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="2 50 decision-space 1000" />
+      <option name="PROGRAM_PARAMETERS" value="1 50 10000" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="HW10-0036484921" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="hr.fer.zemris.optjava.dz11.rng.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="hr.fer.zemris.optjava.dz11.rng.Test1" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="HW11-0036484921" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="FirstAssignment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="hr.fer.zemris.optjava.dz11.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="hr.fer.zemris.optjava.dz11.FirstAssignment" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;D:\fer\5. semestar\ROPAERUJ\workspace\HW11-0036484921\resources\11-kuca-200-133.png&quot; 200 50 10000 0 test &quot;D:\fer\5. semestar\ROPAERUJ\workspace\HW11-0036484921\resources\output.png&quot;" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="HW09-0036484921" />
+      <module name="HW11-0036484921" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="hr.fer.zemris.optjava.dz12.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="hr.fer.zemris.optjava.dz12.models.Test" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="HW12-0036484921" />
       <envs />
       <method />
     </configuration>
@@ -875,19 +1007,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.City" />
-      <item index="1" class="java.lang.String" itemvalue="Application.TSP" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Dataset" />
-      <item index="3" class="java.lang.String" itemvalue="Application.ANNTrainer" />
-      <item index="4" class="java.lang.String" itemvalue="Application.MOOP" />
+      <item index="0" class="java.lang.String" itemvalue="Application.ANNTrainer" />
+      <item index="1" class="java.lang.String" itemvalue="Application.MOOP" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Test1" />
+      <item index="3" class="java.lang.String" itemvalue="Application.FirstAssignment" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Test" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.MOOP" />
-        <item index="1" class="java.lang.String" itemvalue="Application.ANNTrainer" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Dataset" />
-        <item index="3" class="java.lang.String" itemvalue="Application.TSP" />
-        <item index="4" class="java.lang.String" itemvalue="Application.City" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Test" />
+        <item index="1" class="java.lang.String" itemvalue="Application.FirstAssignment" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Test1" />
+        <item index="3" class="java.lang.String" itemvalue="Application.MOOP" />
+        <item index="4" class="java.lang.String" itemvalue="Application.ANNTrainer" />
       </list>
     </recent_temporary>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1016,7 +1148,23 @@
       <workItem from="1483027303149" duration="11839000" />
       <workItem from="1483355077078" duration="18623000" />
       <workItem from="1483435158474" duration="286000" />
-      <workItem from="1483440397898" duration="11000" />
+      <workItem from="1483440397898" duration="186000" />
+      <workItem from="1483440611582" duration="579000" />
+      <workItem from="1483448697211" duration="10386000" />
+      <workItem from="1483460662631" duration="410000" />
+      <workItem from="1483461097687" duration="6026000" />
+      <workItem from="1484912942720" duration="23000" />
+      <workItem from="1484916676838" duration="25000" />
+      <workItem from="1484916737283" duration="8776000" />
+      <workItem from="1485113287743" duration="8682000" />
+      <workItem from="1485198238892" duration="9043000" />
+      <workItem from="1486295162917" duration="6149000" />
+      <workItem from="1486396562068" duration="4739000" />
+      <workItem from="1486405251880" duration="138000" />
+      <workItem from="1486739996611" duration="6929000" />
+      <workItem from="1486815028847" duration="615000" />
+      <workItem from="1486902317319" duration="17716000" />
+      <workItem from="1486990314481" duration="16012000" />
     </task>
     <task id="LOCAL-00001" summary="First homework finished.">
       <created>1475850436435</created>
@@ -1151,11 +1299,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481571446601</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="NSGA homework solved.">
+      <created>1483440429385</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1483440429385</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="456097000" />
+    <option name="totallyTimeSpent" value="552520000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1171,41 +1326,41 @@
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34127843" sideWeight="0.5127932" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.48933902" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2654388" sideWeight="0.48720682" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Memory View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3139659" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31310943" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2708559" sideWeight="0.48720682" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.48933902" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7318763" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31419286" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Memory View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33041576" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="93" y="100" width="774" height="847" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16044776" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1279,278 +1434,390 @@
     <MESSAGE value="Majority of the code for the sixth homework written." />
     <MESSAGE value="Seventh homework started." />
     <MESSAGE value="Seventh homework solved." />
-    <option name="LAST_COMMIT_MESSAGE" value="Seventh homework solved." />
+    <MESSAGE value="NSGA homework solved." />
+    <MESSAGE value="Parallelization homework solved." />
+    <option name="LAST_COMMIT_MESSAGE" value="Parallelization homework solved." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.RuntimeException" package="java.lang" />
-          <option name="timeStamp" value="349" />
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="453" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <condition expression="nondominated.size() == populationSize" language="JAVA" />
-          <url>file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/algorithms/NSGA.java</url>
-          <line>159</line>
-          <properties />
-          <option name="timeStamp" value="351" />
-        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="454" />
+        </breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="352" />
+      <option name="time" value="457" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="this" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/crossovers/DoubleArrayBLXCrossoverOperator.java">
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/rng/ThreadBoundRNGProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="108" lean-forward="false" selection-start-line="13" selection-start-column="108" selection-end-line="13" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/resources/rng-config.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="66" lean-forward="false" selection-start-line="0" selection-start-column="66" selection-end-line="0" selection-end-column="66" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/solutions/DoubleArraySolution.java">
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/rng/EvoThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+        <state relative-caret-position="375">
+          <caret line="32" column="46" lean-forward="false" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/mutations/DoubleArraySolutionNormalMutationOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/algorithms/Distance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="66" lean-forward="false" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/Population.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="89" column="27" lean-forward="false" selection-start-line="89" selection-start-column="27" selection-end-line="89" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/solutions/AbstractSolution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/algorithms/RealValuedMOOPProblem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="25" column="65" lean-forward="false" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/algorithms/NSGA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="37" column="87" lean-forward="false" selection-start-line="37" selection-start-column="87" selection-end-line="37" selection-end-column="87" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/MOOP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/algorithms/Distance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="66" lean-forward="false" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/crossovers/DoubleArrayBLXCrossoverOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="35" column="66" lean-forward="false" selection-start-line="35" selection-start-column="66" selection-end-line="35" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/algorithms/IMOOPProblem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="67" lean-forward="false" selection-start-line="2" selection-start-column="67" selection-end-line="2" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/Population.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/solutions/AbstractSolution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="15" lean-forward="false" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/algorithms/RealValuedMOOPProblem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="25" column="65" lean-forward="false" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/algorithms/NSGA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/algorithms/IMOOPProblem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="67" lean-forward="false" selection-start-line="2" selection-start-column="67" selection-end-line="2" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/crossovers/DoubleArrayBLXCrossoverOperator.java" />
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/mutations/DoubleArraySolutionNormalMutationOperator.java" />
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/selections/RouletteWheelSelection.java" />
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/solutions/RealValuedSolution.java" />
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/algorithms/GenerationalElitistGA.java" />
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/crossovers/ICrossoverOperator.java">
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/rng/Test1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/selections/TournamentSelection.java" />
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/selections/ISelection.java" />
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/mutations/IMutationOperator.java" />
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/mutations/BinMutationOperator.java" />
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/utilities/Pair.java" />
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/utilities/IFunction.java" />
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/utilities/Population.java" />
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/crossovers/ICrossoverOperator.java" />
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/crossovers/BinCrossoverOperator.java" />
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/selections/RouletteWheelSelection.java" />
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/solutions/Solution.java" />
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/mutations/DoubleArraySolutionNormalMutationOperator.java" />
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/crossovers/DoubleArrayBLXCrossoverOperator.java" />
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/algorithms/IMOOPProblem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="67" lean-forward="false" selection-start-line="2" selection-start-column="67" selection-end-line="2" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/algorithms/Distance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="66" lean-forward="false" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/test.js" />
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/IFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="28" lean-forward="true" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW08-0036484921/src/hr/fer/zemris/optjava/dz8/models/neural/FFANN.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/mutations/DoubleArraySolutionNormalMutationOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/selections/RouletteWheelSelection.java">
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/GrayScaleImage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <caret line="70" column="14" lean-forward="false" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/solutions/AbstractSolution.java">
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/selections/ISelectionOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="44" lean-forward="false" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW10-0036484921/src/hr/fer/zemris/optjava/dz10/models/Population.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
-          <caret line="29" column="51" lean-forward="false" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/algorithms/RealValuedMOOPProblem.java">
+    <entry file="file://$PROJECT_DIR$/HW10-0036484921/src/hr/fer/zemris/optjava/dz10/models/selections/TournamentSelection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/crossovers.java" />
+    <entry file="file://$PROJECT_DIR$/HW10-0036484921/src/hr/fer/zemris/optjava/dz10/models/Pair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW10-0036484921/src/hr/fer/zemris/optjava/dz10/models/crossovers/ICrossoverOperator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="8" column="72" lean-forward="false" selection-start-line="8" selection-start-column="72" selection-end-line="8" selection-end-column="72" />
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/Population.java">
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/crossovers/BLXAlphaCrossover.java" />
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/crossovers/Test.java" />
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/rng/RNG.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="51" column="19" lean-forward="false" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+        <state relative-caret-position="204">
+          <caret line="14" column="60" lean-forward="false" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/datoteke/izlaz.txt" />
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/algorithms/NSGA.java">
+    <entry file="file://$PROJECT_DIR$/HW10-0036484921/src/hr/fer/zemris/optjava/dz10/models/crossovers/DoubleArrayBLXCrossoverOperator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1717">
-          <caret line="101" column="65" lean-forward="false" selection-start-line="101" selection-start-column="65" selection-end-line="101" selection-end-column="65" />
+        <state relative-caret-position="119">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/solutions/Pair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/rng/RNGRandomImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="39" lean-forward="false" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/crossovers/ICrossoverOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/algorithms/IAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/evaluators/IGAEvaluator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/resources/11-kuca-200-133.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/solutions/GASolution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/solutions/IntArrayGASolution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/mutations/IMutationOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/solutions/Population.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/mutations/IntRandomMutation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/evaluators/Evaluator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="54" column="33" lean-forward="false" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/resources/output.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/TreeMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="558" column="0" lean-forward="false" selection-start-line="558" selection-start-column="0" selection-end-line="558" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/algorithms/ParallelGenerationGA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="57" column="73" lean-forward="false" selection-start-line="57" selection-start-column="73" selection-end-line="57" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/TreeSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="254" column="0" lean-forward="false" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/selections/TournamentSelection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="52" column="31" lean-forward="false" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/ThreadPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/algorithms/ParallelEvaluationGA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="89" column="54" lean-forward="false" selection-start-line="89" selection-start-column="54" selection-end-line="89" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/Example.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="716">
+          <caret line="79" column="45" lean-forward="false" selection-start-line="79" selection-start-column="45" selection-end-line="79" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/Queue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="190" column="6" lean-forward="false" selection-start-line="190" selection-start-column="6" selection-end-line="190" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/Pair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="29" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW11-0036484921/src/hr/fer/zemris/optjava/dz11/crossovers/IntOnePointCrossover.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/operators/Reproduction.java" />
+    <entry file="file://$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/operators/TournamentSelection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="35" column="36" lean-forward="false" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="74" column="15" lean-forward="true" selection-start-line="74" selection-start-column="15" selection-end-line="74" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/Evaluator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/jre/lib/rt.jar!/sun/misc/Unsafe.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="354" column="23" lean-forward="false" selection-start-line="354" selection-start-column="23" selection-end-line="354" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/GP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/MOOP.java">
+    <entry file="file://$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/nodes/Action.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="55" column="27" lean-forward="false" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/solutions/DoubleArraySolution.java">
+    <entry file="file://$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/Ant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+        <state relative-caret-position="121">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="e#862#863#0" expanded="true" />
+            <element signature="e#912#913#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW09-0036484921/src/hr/fer/zemris/optjava/dz9/models/crossovers/DoubleArrayBLXCrossoverOperator.java">
+    <entry file="file://$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/operators/OnePointCrossover.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="39" column="80" lean-forward="false" selection-start-line="39" selection-start-column="80" selection-end-line="39" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/nodes/INode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#630#631#0" expanded="true" />
+            <element signature="e#672#673#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/operators/OnePointMutation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="23" column="58" lean-forward="false" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
+          <caret line="39" column="56" lean-forward="false" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW12-0036484921/src/hr/fer/zemris/optjava/dz12/models/nodes/Function.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1618,7 +1885,7 @@
       </state>
       <state key="ProjectJDKs.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>1.8 (1)</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
