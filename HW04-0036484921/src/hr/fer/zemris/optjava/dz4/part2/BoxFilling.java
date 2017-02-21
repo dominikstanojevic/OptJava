@@ -1,17 +1,17 @@
 package hr.fer.zemris.optjava.dz4.part2;
 
-import hr.fer.zemris.optjava.dz9.models.IFunction;
-import hr.fer.zemris.optjava.dz9.models.algorithms.SteadyStateGA;
-import hr.fer.zemris.optjava.dz9.models.crossovers.ICrossoverOperator;
-import hr.fer.zemris.optjava.dz9.models.decoders.IDecoder;
-import hr.fer.zemris.optjava.dz9.models.mutations.IMutationOperator;
-import hr.fer.zemris.optjava.dz9.models.selections.ISelection;
-import hr.fer.zemris.optjava.dz9.models.selections.TournamentSelection;
+import hr.fer.zemris.optjava.dz4.models.IFunction;
+import hr.fer.zemris.optjava.dz4.models.algorithms.SteadyStateGA;
+import hr.fer.zemris.optjava.dz4.models.crossovers.ICrossoverOperator;
+import hr.fer.zemris.optjava.dz4.models.decoders.IDecoder;
+import hr.fer.zemris.optjava.dz4.models.mutations.IMutationOperator;
+import hr.fer.zemris.optjava.dz4.models.selections.ISelection;
+import hr.fer.zemris.optjava.dz4.models.selections.TournamentSelection;
 import hr.fer.zemris.optjava.dz4.part2.models.Bin;
-import hr.fer.zemris.optjava.dz9.models.solutions.BinContainer;
-import hr.fer.zemris.optjava.dz9.models.decoders.BinContainerDecoder;
-import hr.fer.zemris.optjava.dz9.models.crossovers.BinCrossoverOperator;
-import hr.fer.zemris.optjava.dz9.models.mutations.BinMutationOperator;
+import hr.fer.zemris.optjava.dz4.models.solutions.BinContainer;
+import hr.fer.zemris.optjava.dz4.models.decoders.BinContainerDecoder;
+import hr.fer.zemris.optjava.dz4.models.crossovers.BinCrossoverOperator;
+import hr.fer.zemris.optjava.dz4.models.mutations.BinMutationOperator;
 import hr.fer.zemris.optjava.dz4.part2.models.Stick;
 
 import java.io.IOException;

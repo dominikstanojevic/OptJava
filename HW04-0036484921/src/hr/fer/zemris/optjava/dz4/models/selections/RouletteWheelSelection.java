@@ -1,8 +1,9 @@
 package hr.fer.zemris.optjava.dz4.models.selections;
 
-import hr.fer.zemris.optjava.dz9.models.Population;
-import hr.fer.zemris.optjava.dz9.models.solutions.AbstractSolution;
+import hr.fer.zemris.optjava.dz4.models.Population;
+import hr.fer.zemris.optjava.dz4.models.solutions.AbstractSolution;
 
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Random;
@@ -40,7 +41,7 @@ public class RouletteWheelSelection<T extends AbstractSolution> implements ISele
             double r = s.getValue() / total + previous;
             accumulated.put(s.getKey(), r);
 
-            previous = r;
+            previous += r;
         }
 
         double rand = random.nextDouble();

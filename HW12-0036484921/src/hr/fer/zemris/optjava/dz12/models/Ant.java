@@ -1,43 +1,38 @@
 package hr.fer.zemris.optjava.dz12.models;
 
+import hr.fer.zemris.optjava.dz12.Utils;
 import hr.fer.zemris.optjava.dz12.models.nodes.INode;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Dominik on 10.2.2017..
  */
 public class Ant implements Comparable<Ant> {
-    public INode[] program;
+    public List<INode> program;
     public Integer collected;
     public Double fitness;
     public Ant parent;
 
     private int maximumDepth;
+    private int maxSize;
 
-    public Ant(int length, int maximumDepth) {
-        program = new INode[length];
-        this.maximumDepth = maximumDepth;
-    }
-
-    public Ant(INode[] program, int maximumDepth) {
-        int depth = program[0].depth(program, new INode.MutableInt(1));
-        if(depth > maximumDepth) {
-            throw new IllegalArgumentException("Depth is bigger than maximum.");
-        }
-
+    public Ant(List<INode> program, int maximumDepth, int maxSize) {
         this.program = program;
         this.maximumDepth = maximumDepth;
+        this.maxSize = maxSize;
     }
 
     public void getNextAction(Grid grid) {
-        program[0].visit(grid, program, 1);
+        program.get(0).visit(grid, program, 1);
     }
 
     public Ant(Ant parent) {
-        this.program = Arrays.copyOf(parent.program, parent.program.length);
+        this.program = new ArrayList<>(parent.program);
         this.parent = parent;
         this.maximumDepth = parent.maximumDepth;
+        this.maxSize = parent.maxSize;
     }
 
     @Override
@@ -46,41 +41,14 @@ public class Ant implements Comparable<Ant> {
     }
 
     public boolean isValid() {
-        boolean valid = checkLength();
-        if (!valid) {
+        if(program.size() > maxSize || !checkDepth()) {
             return false;
         }
 
-        return checkDepth();
+        return true;
     }
 
     private boolean checkDepth() {
-        int depth = program[0].depth(program, new INode.MutableInt(1));
-        return depth <= maximumDepth;
-    }
-
-    private boolean checkLength() {
-        for (int i = 0, size = size(), len = 0; i < size; i++) {
-            if(program[i] == null) {
-                return false;
-            }
-
-            len += program[i].arity();
-            if (len == i) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-    public int size() {
-        for(int i = 0; i < program.length; i++) {
-            if(program[i] == null) {
-                return i;
-            }
-        }
-
-        return program.length;
+        return program.get(0).depth(program, new Utils.MutableInt(1)) <= maximumDepth;
     }
 }

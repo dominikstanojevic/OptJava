@@ -1,6 +1,6 @@
 package hr.fer.zemris.optjava.dz4.models.decoders;
 
-import hr.fer.zemris.optjava.dz9.models.solutions.DoubleArraySolution;
+import hr.fer.zemris.optjava.dz4.models.solutions.DoubleArraySolution;
 
 /**
  * Created by Dominik on 18.10.2016..

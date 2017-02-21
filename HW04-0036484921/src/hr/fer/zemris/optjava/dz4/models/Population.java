@@ -1,14 +1,14 @@
 package hr.fer.zemris.optjava.dz4.models;
 
-import hr.fer.zemris.optjava.dz9.models.solutions.AbstractSolution;
+import hr.fer.zemris.optjava.dz4.models.solutions.AbstractSolution;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 /**
  * Created by Dominik on 25.10.2016..
@@ -20,16 +20,6 @@ public class Population<T extends AbstractSolution> implements Iterable<T> {
     public Population(int capacity) {
         this.capacity = capacity;
         this.population = new ArrayList<>(capacity);
-    }
-
-    public Population(Population<T> population) {
-        capacity = population.capacity;
-        this.population = new ArrayList<>(population.population);
-    }
-
-    public Population(Collection<T> population) {
-        this.capacity = population.size();
-        this.population = new ArrayList<>(population);
     }
 
     public void fill(Random random, Function<Random, T> solutionSupplier) {
@@ -49,7 +39,7 @@ public class Population<T extends AbstractSolution> implements Iterable<T> {
 
     public void addSolution(T solution) {
         if (population.size() >= capacity) {
-            return;
+            throw new IndexOutOfBoundsException("Population already at its maximum capacity.");
         }
 
         population.add(solution);
@@ -65,7 +55,7 @@ public class Population<T extends AbstractSolution> implements Iterable<T> {
     }
 
     public void sort() {
-        population.sort(Collections.reverseOrder());
+        Collections.sort(population, Collections.reverseOrder());
     }
 
     public T getBest() {
@@ -80,13 +70,5 @@ public class Population<T extends AbstractSolution> implements Iterable<T> {
 
     public T get(int index) {
         return population.get(index);
-    }
-
-    public void removeAll(Population<T> population) {
-        this.population.removeAll(population.population);
-    }
-
-    public void clear() {
-        population.clear();
     }
 }

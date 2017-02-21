@@ -9,8 +9,6 @@ import java.util.Random;
 public abstract class AbstractSolution<T> implements Comparable<AbstractSolution> {
     public double fitness;
     public T chromosome;
-    public double[] values;
-
     protected AbstractSolution(T chromosome) {
         this.chromosome = chromosome;
     }
@@ -26,6 +24,4 @@ public abstract class AbstractSolution<T> implements Comparable<AbstractSolution
 
     @Override
     public abstract String toString();
-
-    public abstract boolean satisfiesConstraints();
 }

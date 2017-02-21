@@ -40,15 +40,4 @@ public class DoubleArraySolution extends AbstractSolution<double[]> {
 
         return sj.toString();
     }
-
-    @Override
-    public boolean satisfiesConstraints() {
-        for(int i = 0; i < chromosome.length; i++) {
-            if (chromosome[i] < min[i] || chromosome[i] > max[i]) {
-                return false;
-            }
-        }
-
-        return true;
-    }
 }

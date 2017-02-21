@@ -1,9 +1,10 @@
 package hr.fer.zemris.optjava.dz4.models.crossovers;
 
-import hr.fer.zemris.optjava.dz9.models.Pair;
-import hr.fer.zemris.optjava.dz9.models.solutions.DoubleArraySolution;
+import hr.fer.zemris.optjava.dz4.models.Pair;
+import hr.fer.zemris.optjava.dz4.models.solutions.DoubleArraySolution;
 
 import java.util.Random;
+import java.util.function.Supplier;
 
 /**
  * Created by Dominik on 4.11.2016..
@@ -32,8 +33,8 @@ public class DoubleArrayBLXCrossoverOperator implements ICrossoverOperator<Doubl
 
             double d = max - min;
 
-            firstChild.chromosome[i] = random.nextDouble() * d * (1 + 2 * alpha) + (min - alpha * d);
-            secondChild.chromosome[i] = random.nextDouble() * d * (1 + 2 * alpha) + (min - alpha * d);
+            firstChild.chromosome[i] = random.nextDouble() * (max - min + 2 * alpha * d) + (min - alpha * d);
+            secondChild.chromosome[i] = random.nextDouble() * (max - min + 2 * alpha * d) + (min - alpha * d);
         }
 
         return new Pair<>(firstChild, secondChild);

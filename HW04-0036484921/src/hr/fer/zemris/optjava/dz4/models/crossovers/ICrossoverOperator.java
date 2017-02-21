@@ -1,7 +1,7 @@
 package hr.fer.zemris.optjava.dz4.models.crossovers;
 
-import hr.fer.zemris.optjava.dz9.models.Pair;
-import hr.fer.zemris.optjava.dz9.models.solutions.AbstractSolution;
+import hr.fer.zemris.optjava.dz4.models.Pair;
+import hr.fer.zemris.optjava.dz4.models.solutions.AbstractSolution;
 
 import java.util.Random;
 

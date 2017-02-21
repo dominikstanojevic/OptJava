@@ -1,6 +1,6 @@
 package hr.fer.zemris.optjava.dz4.models.mutations;
 
-import hr.fer.zemris.optjava.dz9.models.solutions.DoubleArraySolution;
+import hr.fer.zemris.optjava.dz4.models.solutions.DoubleArraySolution;
 
 import java.util.Random;
 

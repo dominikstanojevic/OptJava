@@ -1,6 +1,5 @@
 package hr.fer.zemris.optjava.dz12.models;
 
-import hr.fer.zemris.optjava.dz12.models.nodes.INode;
 import hr.fer.zemris.optjava.dz12.models.operators.OnePointCrossover;
 import hr.fer.zemris.optjava.dz12.models.operators.OnePointMutation;
 import hr.fer.zemris.optjava.dz12.models.operators.TournamentSelection;
@@ -15,8 +14,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.ThreadLocalRandom;
-import java.util.function.Function;
-import java.util.function.Supplier;
 
 /**
  * Created by Dominik on 12.2.2017..
@@ -24,26 +21,23 @@ import java.util.function.Supplier;
 public class GP {
     private int populationSize;
     private int maxGenerations;
-    private Function<INode[], Ant> antSupplier;
+    private double minFitness;
     private double crossoverProbability;
     private double mutationProbability;
-    private double reproductionProbability;
     private Evaluator evaluator;
     private OnePointMutation mutationOperator;
     private OnePointCrossover crossoverOperator;
     private TournamentSelection selectionOperator;
 
     public GP(
-            int populationSize, int maxGenerations, Function<INode[], Ant> antSupplier, double crossoverProbability,
-            double mutationProbability, double reproductionProbability, Evaluator evaluator,
-            OnePointMutation mutationOperator, OnePointCrossover crossoverOperator,
-            TournamentSelection selectionOperator) {
+            int populationSize, int maxGenerations, double crossoverProbability, double mutationProbability,
+            double minFitness, Evaluator evaluator, OnePointMutation mutationOperator,
+            OnePointCrossover crossoverOperator, TournamentSelection selectionOperator) {
         this.populationSize = populationSize;
         this.maxGenerations = maxGenerations;
-        this.antSupplier = antSupplier;
+        this.minFitness = minFitness;
         this.crossoverProbability = crossoverProbability;
         this.mutationProbability = mutationProbability;
-        this.reproductionProbability = reproductionProbability;
         this.evaluator = evaluator;
         this.mutationOperator = mutationOperator;
         this.crossoverOperator = crossoverOperator;
@@ -51,12 +45,17 @@ public class GP {
     }
 
     public Ant run(List<Ant> population) {
-        ExecutorService pool = Executors.newFixedThreadPool(1);
+        ExecutorService pool = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
         for (int i = 0; i < maxGenerations; i++) {
             evaluate(population, pool);
             Ant best = getBest(population);
             System.out.println("Iteration: " + i + ", fitness: " + best.fitness);
+
+            if (best.fitness >= minFitness) {
+                pool.shutdown();
+                return best;
+            }
 
             population = createGeneration(population);
         }
@@ -75,17 +74,17 @@ public class GP {
         Random random = ThreadLocalRandom.current();
         while (newPop.size() < populationSize) {
             double probability = random.nextDouble();
-            if(probability <= crossoverProbability) {
-               Pair<Ant, Ant> children = crossover(population);
-               if(children.first != null) {
-                   newPop.add(children.first);
-               }
-               if (children.second != null && newPop.size() < populationSize) {
-                   newPop.add(children.second);
-               }
+            if (probability <= crossoverProbability) {
+                Pair<Ant, Ant> children = crossover(population);
+                if (children.first != null) {
+                    newPop.add(children.first);
+                }
+                if (children.second != null && newPop.size() < populationSize) {
+                    newPop.add(children.second);
+                }
             } else if (probability - crossoverProbability <= mutationProbability) {
                 Ant mutated = mutate(population);
-                if(mutated != null) {
+                if (mutated != null) {
                     newPop.add(mutated);
                 }
             } else {
@@ -97,8 +96,8 @@ public class GP {
     }
 
     private Ant mutate(List<Ant> population) {
-       Ant selected = selectionOperator.select(population);
-      return mutationOperator.mutate(selected);
+        Ant selected = selectionOperator.select(population);
+        return mutationOperator.mutate(selected);
     }
 
     private Pair<Ant, Ant> crossover(List<Ant> population) {
@@ -111,6 +110,10 @@ public class GP {
     private void evaluate(List<Ant> population, ExecutorService pool) {
         List<Callable<Void>> callables = new ArrayList<>();
         for (Ant ant : population) {
+            if (ant.fitness != null) {
+                continue;
+            }
+
             Callable<Void> callable = () -> {
                 evaluator.evaluate(ant);
                 return null;

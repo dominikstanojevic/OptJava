@@ -19,6 +19,9 @@ public class Grid {
     private Position position = new Position();
     private int collected = 0;
     private int movesLeft;
+    private int move;
+
+    private Action[] actions;
 
     public Grid(boolean[][] food) {
         Objects.requireNonNull(food, "Food array cannot be null.");
@@ -72,12 +75,17 @@ public class Grid {
         }
     }
 
-    public int play(Ant ant, int moves) {
+    public void reset(int moves) {
         position.reset();
-        //ant.reset();
+        actions = new Action[moves];
 
+        move = 0;
         movesLeft = moves;
         collected = collectFood() ? 1 : 0;
+    }
+
+    public int play(Ant ant, int moves) {
+        reset(moves);
 
         while (movesLeft > 0) {
             ant.getNextAction(this);
@@ -99,6 +107,9 @@ public class Grid {
         if (movesLeft <= 0) {
             return;
         }
+
+        actions[move] = action;
+        move++;
 
         switch (action) {
             case LEFT:
@@ -136,6 +147,18 @@ public class Grid {
             default:
                 throw new RuntimeException();
         }
+    }
+
+    public boolean[][] getFood() {
+        return food;
+    }
+
+    public Action[] getActions() {
+        return actions;
+    }
+
+    public Position getPosition() {
+        return position;
     }
 
     public static class Position {
@@ -184,4 +207,6 @@ public class Grid {
             direction = Direction.RIGHT;
         }
     }
+
+
 }

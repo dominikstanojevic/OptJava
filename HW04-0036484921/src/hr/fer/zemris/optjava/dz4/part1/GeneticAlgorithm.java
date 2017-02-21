@@ -46,7 +46,7 @@ public class GeneticAlgorithm {
     public static final double MIN_ERROR = 1e-4;
 
     public static void main(String[] args) throws IOException {
-        double[][] data = loadData(args[2], 20, 6);
+        double[][] data = loadData(args[0], 20, 6);
 
         IFunction function = vector -> {
             double total = 0;
